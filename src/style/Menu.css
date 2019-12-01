@@ -1,0 +1,30 @@
+
+.bg-dark {
+    background-color: #096257 !important;
+    z-index: 555;
+}
+
+.active.nav-link{
+    border-bottom: 2px solid #02577a;
+}
+.nav-link{
+    font-weight: 700;
+    font-size: 14px;
+    color: #e6e6e6 !important;
+
+}
+.logo{
+    width: 150px;
+    height: auto;
+}
+.navbar{
+    padding-bottom: 0px;
+}
+.navbar-light .navbar-toggler{
+    border: 0;
+    outline: none;
+}
+.navbar-toggler-icon{
+    width: 2em!important;
+    height: 2em!important;
+}
