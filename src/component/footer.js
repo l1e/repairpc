@@ -10,9 +10,14 @@ function Footer() {
             <footer className="footer">
                 <Container >
                     <Row>
-                        <p className="footer_year">
-                            © 2019
-                        </p>
+                        <Col>
+                            <p className="footer_year">
+                                © 2019
+                            </p>
+                            <p className="footer__prone">
+                                <a href="tel:+380663653035">+380663653035</a>
+                            </p>
+                        </Col>
                     </Row>
                 </Container>
             </footer>

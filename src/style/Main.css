@@ -1,0 +1,35 @@
+.section-one{
+    display: flex;
+    align-items: center;
+    background-image: url(../images/main-2-fullhd.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: calc(100vh - 64px);
+    max-height: 600px;
+    box-shadow: inset 0 0 0 2000px rgba(119, 114, 114, 0.65);
+}
+.section-one__text{
+    color: #fff;
+}
+
+.section-one__title{
+    color: #fff;
+}
+
+.section-services{
+    min-height: 600px;
+}
+
+.section-services__title{
+    text-align: center;
+    margin-top: 20px;
+}
+.box{
+    text-align: center;
+    margin: 20px auto;
+}
+.box__img{
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+}
