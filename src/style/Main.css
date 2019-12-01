@@ -33,3 +33,23 @@
     max-width: 200px;
     height: auto;
 }
+.section-contact{
+    margin: 20px auto;
+}
+.section-contact__title{
+    text-align: center;
+    margin-bottom: 40px;
+}
+.contact-form__button{
+    margin: auto;
+    display: block;
+}
+
+.contact-form{
+    margin: 20px auto;
+}
+
+.contact-left__img{
+    width: 100%;
+    height: auto;
+}
