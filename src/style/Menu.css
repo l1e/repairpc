@@ -1,16 +1,12 @@
 
-.bg-dark {
-    background-color: #096257 !important;
-    z-index: 555;
-}
 
 .active.nav-link{
-    border-bottom: 2px solid #02577a;
+    border-bottom: 2px solid #333;
 }
 .nav-link{
     font-weight: 700;
     font-size: 14px;
-    color: #e6e6e6 !important;
+    color: #333 !important;
 
 }
 .logo{
@@ -19,6 +15,7 @@
 }
 .navbar{
     padding-bottom: 0px;
+    width: 100%;
 }
 .navbar-light .navbar-toggler{
     border: 0;

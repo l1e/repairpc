@@ -1,0 +1,15 @@
+.footer{
+    background: #1a1a1a;
+    width: 100%;
+    position:absolute;
+    left:0;
+    bottom:0;
+    right:0;
+
+}
+.footer_year{
+    font-size: 12px;
+    color: #999;
+    margin: auto;
+    padding: 25px 0;
+}
