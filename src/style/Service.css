@@ -1,0 +1,13 @@
+.box{
+    text-align: center;
+    margin: 20px auto;
+}
+.box__img{
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+}
+
+.box__title{
+    margin-top: 25px;
+}
