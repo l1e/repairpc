@@ -1,6 +1,6 @@
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
-import React from "react";
+import React,{Fragment} from "react";
 import '../style/Menu.css';
 import goalImg from '../images/logo.png';
 import {NavLink} from 'react-router-dom';
@@ -11,31 +11,35 @@ import Col from 'react-bootstrap/Col';
 
 function Menu() {
     return (
-        <Container >
-            <Row>
-                <Col>
-                    <Navbar inverse fluid collapseOnSelect expand="lg" >
-                        <Navbar.Brand href="/">
-                            <img className="logo" src={goalImg} alt=""/>
-                        </Navbar.Brand>
-                        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-                        <Navbar.Collapse id="responsive-navbar-nav">
-                            <Nav className="ml-auto">
-                                <li className="menu-item">
-                                    <NavLink className="nav-link" activeClassName={"active"} exact={true} to="/">Главная</NavLink>
-                                </li>
-                                <li className="menu-item">
-                                    <NavLink className="nav-link" activeClassName="active" to="/Services" >Услуги</NavLink>
-                                </li>
-                                <li className="menu-item">
-                                    <NavLink className="nav-link" activeClassName="active" to="/Contact" >Контакты</NavLink>
-                                </li>
-                            </Nav>
-                        </Navbar.Collapse>
-                    </Navbar>
-                </Col>
-            </Row>
-        </Container>
+        <Fragment >
+            <Container >
+                <Row>
+                    <Col>
+                        <Navbar inverse fluid collapseOnSelect expand="lg" >
+                            <Navbar.Brand >
+                                <NavLink  to='/'>
+                                    <img className="logo" src={goalImg} alt=""/>
+                                </NavLink>
+                            </Navbar.Brand>
+                            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                            <Navbar.Collapse id="responsive-navbar-nav">
+                                <Nav className="ml-auto">
+                                    <li className="menu-item">
+                                        <NavLink className="nav-link" activeClassName={"active"} exact={true} to="/">Главная</NavLink>
+                                    </li>
+                                    <li className="menu-item">
+                                        <NavLink className="nav-link" activeClassName="active" to="/Services" >Услуги</NavLink>
+                                    </li>
+                                    <li className="menu-item">
+                                        <NavLink className="nav-link" activeClassName="active" to="/Contact" >Контакты</NavLink>
+                                    </li>
+                                </Nav>
+                            </Navbar.Collapse>
+                        </Navbar>
+                    </Col>
+                </Row>
+            </Container>
+        </Fragment>
     )
 }
 
