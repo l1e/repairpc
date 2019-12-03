@@ -23,7 +23,8 @@ class Map extends Component {
             <Container className='map'>
                 <Row >
                     <Col lg='12'>
-                    <div style={{ height: '60vh', width: '100%' }}>
+                        <h2 className='section-title'>Мы на карте</h2>
+                        <div style={{ height: '60vh', width: '100%' }}>
                         <GoogleMapReact
                             bootstrapURLKeys={{ key:'AIzaSyAhEinEuiO3IXu7YxlgShb1fv9I47WA3Y8' }}
                             defaultCenter={this.props.center}
