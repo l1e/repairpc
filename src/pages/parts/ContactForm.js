@@ -18,7 +18,7 @@ class ContactForm extends  Component{
                     <Container >
                         <Row >
                             <Col lg='12'>
-                                <h2 className='section-contact__title'>Contact us</h2>
+                                <h2 className='section-contact__title'>Свяжитесь с нами</h2>
                             </Col>
                             <Col lg='6'>
                                 <div className="contact-left">
@@ -34,15 +34,15 @@ class ContactForm extends  Component{
 
                                     <Form className='contact-form'>
                                         <Form.Group controlId="formGroupEmail">
-                                            <Form.Label>Email address</Form.Label>
-                                            <Form.Control type="email" placeholder="Enter email" />
+                                            <Form.Label>Почта</Form.Label>
+                                            <Form.Control type="email" placeholder="Введите имейл" />
                                         </Form.Group>
                                         <Form.Group controlId="formGroupPassword">
-                                            <Form.Label>Password</Form.Label>
-                                            <Form.Control type="password" placeholder="Password" />
+                                            <Form.Label>Номер телефона</Form.Label>
+                                            <Form.Control type="number" placeholder="Ваш номер телефона" />
                                         </Form.Group>
                                         <Button className='contact-form__button' variant="primary" type="submit">
-                                            Submit
+                                            Отправить
                                         </Button>
                                     </Form>
 

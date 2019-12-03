@@ -8,8 +8,13 @@
 .contact-form__button{
     margin: auto;
     display: block;
+    background-color: #2dad67;
+    border-color: #2dad67;
 }
-
+.contact-form__button:hover{
+    background-color: #82b440;
+    border-color: #82b440;
+}
 .contact-form{
     margin: 40px auto;
 }

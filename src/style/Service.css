@@ -11,3 +11,14 @@
 .box__title{
     margin-top: 25px;
 }
+
+.box__button{
+    margin: auto;
+    display: block;
+    background-color: #2dad67;
+    border-color: #2dad67;
+}
+.box__button:hover{
+    background-color: #82b440;
+    border-color: #82b440;
+}

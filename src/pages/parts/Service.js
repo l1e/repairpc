@@ -19,7 +19,7 @@ class Service extends  Component{
                         Ab amet blanditiis distinctio dolore minima.
                     </p>
                     <Link to="/ServiceSingle">
-                        <Button variant="light"> Подробнее</Button>
+                        <Button className='box__button' variant="primary"> Подробнее</Button>
                     </Link>
                 </div>
 
