@@ -14,11 +14,11 @@ class ContactForm extends  Component{
     render(){
         return(
             <Fragment>
-                <div className="section-contact">
+                <div className="section-contact section">
                     <Container >
                         <Row >
                             <Col lg='12'>
-                                <h2 className='section-contact__title'>Свяжитесь с нами</h2>
+                                <h2 className='section-contact__title section-title'>Свяжитесь с нами</h2>
                             </Col>
                             <Col lg='6'>
                                 <div className="contact-left">

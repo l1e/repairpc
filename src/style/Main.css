@@ -2,11 +2,10 @@ a:hover{
     text-decoration: none;
 }
 .section-services{
-    min-height: 600px;
+    min-height: 550px;
 }
 
 .section-services__title{
-    text-align: center;
-    margin-top: 20px;
+
 }
 

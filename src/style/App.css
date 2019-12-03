@@ -17,3 +17,15 @@ code {
   position: relative;
   padding-bottom: 92px;
 }
+
+.section-title{
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+div.section{
+  margin: 30px auto 40px;
+}
+.header{
+  box-shadow: 1px -1px 10px 2px rgba(179,179,179,1);
+}

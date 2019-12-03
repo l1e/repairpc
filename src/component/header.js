@@ -3,9 +3,9 @@ import Menu from  '../component/Menu';
 class Header extends  Component{
     render(){
         return(
-            <Fragment>
+            <header className='header'>
                 <Menu />
-            </Fragment>
+            </header>
         )
     }
 }

@@ -14,7 +14,7 @@ class Welcome extends  Component{
                     <Container >
                         <Row>
                             <Col lg='4'>
-                                <h2 className='section-one__title'>
+                                <h2 className='section-one__title '>
                                     Lorem ipsum dolor sit amet.
                                 </h2>
                                 <p className="section-one__text">

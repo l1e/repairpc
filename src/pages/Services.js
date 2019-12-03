@@ -9,11 +9,11 @@ class Services extends  Component{
     render(){
         return(
             <Fragment>
-                <div className="section-services">
+                <div className="section-services section">
                     <Container >
                         <Row className='boxes'>
                             <Col lg='12'>
-                                <h1 className='section-services__title'>Наши услуги</h1>
+                                <h2 className='section-services__title section-title'>Наши услуги</h2>
                             </Col>
 
                             <Col lg='4' md='6' sm='12'>

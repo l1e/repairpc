@@ -11,7 +11,7 @@ class Service extends  Component{
             <Fragment>
                 <div className='box'>
                     <img src={imgRepairPc} alt="" className="box__img"/>
-                    <h2 className="box__title"> Удаление пыли</h2>
+                    <h3 className="box__title"> Удаление пыли</h3>
                     <p className="box__description">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                         Beatae dolorem doloribus earum enim,

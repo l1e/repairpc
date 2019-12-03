@@ -1,12 +1,10 @@
 .section-contact{
-    margin: 20px auto;
+    margin: auto;
 }
 .section-contact__title{
-    text-align: center;
-    margin-bottom: 40px;
 }
 .contact-form__button{
-    margin: auto;
+    margin: 30px auto auto;
     display: block;
     background-color: #2dad67;
     border-color: #2dad67;
