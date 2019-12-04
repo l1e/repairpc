@@ -17,26 +17,26 @@ class Services extends  Component{
                             </Col>
 
                             <Col lg='4' md='6' sm='12'>
-                                <Service/>
+                                <Service name='sicret'/>
                             </Col>
 
                             <Col lg='4' md='6' sm='12'>
-                                <Service/>
+                                <Service name='sicret' />
                             </Col>
 
                             <Col lg='4' md='6' sm='12'>
-                                <Service/>
+                                <Service name='sicret' />
                             </Col>
                             <Col lg='4' md='6' sm='12'>
-                                <Service/>
-                            </Col>
-
-                            <Col lg='4' md='6' sm='12'>
-                                <Service/>
+                                <Service name='sicret' />
                             </Col>
 
                             <Col lg='4' md='6' sm='12'>
-                                <Service/>
+                                <Service name='sicret' />
+                            </Col>
+
+                            <Col lg='4' md='6' sm='12'>
+                                <Service name='sicret' />
                             </Col>
                         </Row>
                     </Container>
