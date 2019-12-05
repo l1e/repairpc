@@ -5,9 +5,15 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
+import { useTranslation, Trans } from "react-i18next";
 
-class Welcome extends  Component{
-    render(){
+function  Welcome (){
+
+    const { t, i18n } = useTranslation();
+
+    const changeLanguage = lng => {
+        i18n.changeLanguage(lng);
+    };
         return(
             <Fragment>
                 <div className="section-one">
@@ -15,9 +21,10 @@ class Welcome extends  Component{
                         <Row>
                             <Col lg='4'>
                                 <h2 className='section-one__title '>
-                                    Lorem ipsum dolor sit amet.
+                                    <Trans i18nKey="welcome">trans</Trans>
                                 </h2>
                                 <p className="section-one__text">
+
                                     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                                     Accusamus accusantium amet assumenda autem commodi deleniti,
                                     dolores eligendi enim eveniet explicabo, iure nihil nisi non quo totam ut vitae,
@@ -29,7 +36,6 @@ class Welcome extends  Component{
                 </div>
             </Fragment>
         )
-    }
 }
 
 export default Welcome;

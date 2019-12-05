@@ -8,19 +8,22 @@ i18n
     .init({
         // we init with resources
         resources: {
-            en: {
+            ru: {
                 translations: {
-                    "To get started, edit <1>src/App.js</1> and save to reload.":
-                        "To get started, edit <1>src/App.js</1> and save to reload.",
-                    "Welcome to React": "Welcome to React and react-i18next",
-                    welcome: "Hello <br/> <strong>World</strong>"
+                    welcome: "Давайте сделаем мир лучше.",
+                    menu_main: "Главная",
+                    menu_serv: "Услуги",
+                    menu_cont: "Контакты",
                 }
             },
-            de: {
+            en: {
                 translations: {
-                    "To get started, edit <1>src/App.js</1> and save to reload.":
-                        "Starte in dem du, <1>src/App.js</1> editierst und speicherst.",
-                    "Welcome to React": "Willkommen bei React und react-i18next"
+
+
+                    welcome: "Lets make world better.",
+                    menu_main: "Main",
+                    menu_serv: "Services",
+                    menu_cont: "Contact",
                 }
             }
         },

@@ -3,6 +3,8 @@ import {BrowserRouter  as Router ,Route, Switch} from "react-router-dom";
 import './style/App.css';
 import './style/BootstrapSettings.sass';
 
+import './component/i18n';
+
 import Header from './component/Header';
 import Footer from "./component/Footer";
 
