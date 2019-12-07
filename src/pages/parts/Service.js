@@ -10,6 +10,7 @@ import Col from 'react-bootstrap/Col';
 import imgRepairPc from '../../images/services_repairpc.png';
 import {withTranslation} from "react-i18next/src/index";
 
+
 class ServicePrepare extends  Component{
     constructor(props){
         super(props);

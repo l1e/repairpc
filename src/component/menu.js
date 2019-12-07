@@ -1,4 +1,4 @@
-import React,{Fragment} from "react";
+import React,{Fragment } from "react";
 import {NavLink} from 'react-router-dom';
 import { withTranslation, Trans  } from 'react-i18next';
 import i18n from './i18n';
@@ -13,8 +13,6 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
-
-
 
 class MenuPrepare extends React.Component{
 
@@ -40,10 +38,13 @@ class MenuPrepare extends React.Component{
 
     }
 
+
     render(){
         const changeLanguage = lng => {
             i18n.changeLanguage(lng);
-            this.forceUpdate();
+            // this.forceUpdate();
+            // appHistory.push('/');
+
         };
         const changeActive = (lang)=>{
             console.log('active lang is:'+lang);
@@ -63,6 +64,7 @@ class MenuPrepare extends React.Component{
                 )
             }
         };
+
         return (
             <Fragment >
                 <Container >
@@ -97,6 +99,7 @@ class MenuPrepare extends React.Component{
                                             <Button className={this.state.buttonEn} variant="light" onClick={() =>
                                             {changeLanguage("en");
                                                 changeActive("en");
+
                                             }
                                             }>en</Button >
                                         </Nav>
