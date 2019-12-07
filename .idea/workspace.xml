@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="deb44048-49c2-46ac-afb6-255c7a6b84e4" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/i18n.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/i18n.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/parts/ContactForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/parts/ContactForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/parts/Welcome.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/parts/Welcome.js" afterDir="false" />
-    </list>
+    <list default="true" id="deb44048-49c2-46ac-afb6-255c7a6b84e4" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -52,7 +47,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="i18n.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="i18n.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/component/i18n.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="474">
@@ -76,11 +71,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Menu.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Menu.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/component/Menu.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="11" selection-start-line="11" selection-end-line="11" selection-end-column="56" />
+            <state relative-caret-position="384">
+              <caret line="24" column="24" lean-forward="true" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
+              <folding>
+                <element signature="e#0#44#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -147,10 +145,10 @@
         <option value="$PROJECT_DIR$/src/pages/parts/Service.js" />
         <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/style/Menu.css" />
-        <option value="$PROJECT_DIR$/src/component/Menu.js" />
         <option value="$PROJECT_DIR$/src/pages/parts/ContactForm.js" />
         <option value="$PROJECT_DIR$/src/pages/parts/Welcome.js" />
         <option value="$PROJECT_DIR$/src/component/i18n.js" />
+        <option value="$PROJECT_DIR$/src/component/Menu.js" />
       </list>
     </option>
   </component>
@@ -270,12 +268,12 @@
       <option name="presentableId" value="Default" />
       <updated>1575190535482</updated>
       <workItem from="1575190536892" duration="57710000" />
-      <workItem from="1575711920510" duration="5354000" />
+      <workItem from="1575711920510" duration="5537000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63064000" />
+    <option name="totallyTimeSpent" value="63247000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="54" y="-8" width="1234" height="1040" extended-state="6" />
@@ -406,6 +404,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="752">
           <caret line="59" column="121" selection-start-line="59" selection-start-column="121" selection-end-line="59" selection-end-column="163" />
+          <folding>
+            <element signature="e#0#44#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -575,13 +576,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/component/Menu.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="11" selection-start-line="11" selection-end-line="11" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/parts/ContactForm.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -608,6 +602,16 @@
           <caret line="33" column="279" selection-start-line="33" selection-start-column="279" selection-end-line="33" selection-end-column="279" />
           <folding>
             <element signature="e#0#27#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/component/Menu.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="24" column="24" lean-forward="true" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#44#0" expanded="true" />
           </folding>
         </state>
       </provider>

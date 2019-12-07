@@ -27,8 +27,10 @@ class MenuPrepare extends React.Component{
 
         if (getCurrLanguage =='ru'){
             this.setState(
-                {buttonRu: 'active',
-                    buttonEn: 'pasive'}
+                {
+                 buttonRu: 'active',
+                 buttonEn: 'pasive'
+                }
             )
         }
 
@@ -43,13 +45,17 @@ class MenuPrepare extends React.Component{
             console.log('active lang is:'+lang);
             if (lang==='ru'){
                 this.setState(
-                    {buttonRu: 'active',
-                    buttonEn: 'pasive'}
-                    )
+                    {
+                        buttonRu: 'active',
+                        buttonEn: 'pasive'
+                    }
+                )
             }else{
                 this.setState(
-                    {buttonRu: 'pasive',
-                        buttonEn: 'active'}
+                    {
+                        buttonRu: 'pasive',
+                        buttonEn: 'active'
+                    }
                 )
             }
         };
