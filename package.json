@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@react-firebase/database": "^0.3.11",
     "bootstrap": "^4.4.1",
+    "firebase": "^7.5.2",
     "google-map-react": "^1.1.5",
     "i18next": "^19.0.1",
     "i18next-browser-languagedetector": "^4.0.1",

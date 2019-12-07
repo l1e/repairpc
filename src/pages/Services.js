@@ -4,8 +4,19 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
+import {db} from '../config/firebaseConfig';
+
 import Service from "./parts/Service";
+
 class Services extends  Component{
+
+    componentDidMount(){
+        db.ref('number/one').on('value', (snap)=>{
+            console.log(snap.val());
+        })
+    };
+
+
     render(){
         return(
             <Fragment>

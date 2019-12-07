@@ -4,8 +4,14 @@ import {Link} from "react-router-dom";
 import Button from 'react-bootstrap/Button';
 import '../../style/Service.css';
 
+
 import imgRepairPc from '../../images/services_repairpc.png';
+
 class Service extends  Component{
+    constructor(props){
+        super(props);
+    }
+    
     render(props){
         return(
             <Fragment>
