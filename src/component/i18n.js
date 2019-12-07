@@ -21,8 +21,8 @@ i18n
                     contact_label_phone:'Номер телефона',
                     contact_placeholder_email:'Введите емейл',
                     contact_placeholder_phone:'Ваш номер телефона',
-                    contact_submit:'Отправить'
-
+                    contact_submit:'Отправить',
+                    services_title: "Наши услуги"
 
                 }
             },
@@ -41,8 +41,8 @@ i18n
                     contact_label_phone:'Prone number',
                     contact_placeholder_email:'Enter email',
                     contact_placeholder_phone:'Your phone number',
-                    contact_submit:'Send'
-
+                    contact_submit:'Send',
+                    services_title: "Our Services"
                 }
             }
         },

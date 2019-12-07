@@ -1,4 +1,5 @@
 import React,{Fragment,Component} from 'react';
+import { withTranslation, Trans  } from 'react-i18next';
 
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -8,14 +9,27 @@ import {db} from '../config/firebaseConfig';
 
 import Service from "./parts/Service";
 
-class Services extends  Component{
+let articlesDb = db.ref('/articles');
 
-    componentDidMount(){
-        db.ref('number/one').on('value', (snap)=>{
-            console.log(snap.val());
-        })
+
+class ServicesPrepare extends  Component{
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            articles: []
+        }
+    }
+
+    componentDidMount() {
+        articlesDb.on('value', snapshot => {
+            let data = snapshot.val();
+            let articles = Object.values(data);
+            this.setState({ articles });
+            console.log(this.state.articles);
+        });
+
     };
-
 
     render(){
         return(
@@ -24,31 +38,10 @@ class Services extends  Component{
                     <Container >
                         <Row className='boxes'>
                             <Col lg='12'>
-                                <h2 className='section-services__title section-title'>Наши услуги</h2>
+                                <h2 className='section-services__title section-title'><Trans i18nKey="services_title">Наши услуги</Trans></h2>
                             </Col>
 
-                            <Col lg='4' md='6' sm='12'>
-                                <Service name='sicret'/>
-                            </Col>
-
-                            <Col lg='4' md='6' sm='12'>
-                                <Service name='sicret' />
-                            </Col>
-
-                            <Col lg='4' md='6' sm='12'>
-                                <Service name='sicret' />
-                            </Col>
-                            <Col lg='4' md='6' sm='12'>
-                                <Service name='sicret' />
-                            </Col>
-
-                            <Col lg='4' md='6' sm='12'>
-                                <Service name='sicret' />
-                            </Col>
-
-                            <Col lg='4' md='6' sm='12'>
-                                <Service name='sicret' />
-                            </Col>
+                                <Service articles={this.state.articles} />
                         </Row>
                     </Container>
                 </div>
@@ -57,6 +50,6 @@ class Services extends  Component{
         )
     }
 }
-
+const Services = withTranslation()(ServicesPrepare);
 
 export default Services;

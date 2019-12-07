@@ -1,16 +1,20 @@
+import React,{Fragment} from "react";
+import {NavLink} from 'react-router-dom';
+import { withTranslation, Trans  } from 'react-i18next';
+import i18n from './i18n';
+
+import '../style/Menu.css';
+
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
-import React,{Fragment} from "react";
-import '../style/Menu.css';
 import goalImg from '../images/logo.png';
-import {NavLink} from 'react-router-dom';
+
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 
-import { withTranslation, Trans  } from 'react-i18next';
-import i18n from './i18n';
+
 
 class MenuPrepare extends React.Component{
 
@@ -25,7 +29,7 @@ class MenuPrepare extends React.Component{
     componentDidMount(){
         let getCurrLanguage = i18n.language;
 
-        if (getCurrLanguage =='ru'){
+        if (getCurrLanguage ==='ru'){
             this.setState(
                 {
                  buttonRu: 'active',
@@ -37,9 +41,9 @@ class MenuPrepare extends React.Component{
     }
 
     render(){
-        const { t } = this.props;
         const changeLanguage = lng => {
             i18n.changeLanguage(lng);
+            this.forceUpdate();
         };
         const changeActive = (lang)=>{
             console.log('active lang is:'+lang);
@@ -64,7 +68,7 @@ class MenuPrepare extends React.Component{
                 <Container >
                     <Row>
                         <Col>
-                            <Navbar bs-navbar-collapse inverse fluid collapseOnSelect expand="lg" >
+                            <Navbar  inverse='true' collapseOnSelect expand="lg" >
                                 <Navbar.Brand >
                                     <NavLink  to='/'>
                                         <img className="logo" src={goalImg} alt=""/>

@@ -1,4 +1,5 @@
 import React,{Fragment,Component} from 'react';
+import { withTranslation, Trans  } from 'react-i18next';
 
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -7,8 +8,6 @@ import Button from 'react-bootstrap/Button';
 import imgContact from '../../images/contact3.png';
 import Form from 'react-bootstrap/Form';
 
-import { withTranslation, Trans  } from 'react-i18next';
-import i18n from '../../component/i18n';
 
 import '../../style/ContactForm.css';
 

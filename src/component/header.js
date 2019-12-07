@@ -1,4 +1,4 @@
-import React,{Fragment,Component} from 'react';
+import React,{Component} from 'react';
 import Menu from  '../component/Menu';
 class Header extends  Component{
     render(){
