@@ -1,4 +1,12 @@
 
+.header{
+    border-bottom: 1px solid #3f3f3f3f;
+}
+
+.navbar{
+    padding-bottom: 0px;
+    width: 100%;
+}
 
 .active.nav-link{
     border-bottom: 2px solid #333;
@@ -13,10 +21,6 @@
     width: 150px;
     height: auto;
 }
-.navbar{
-    padding-bottom: 0px;
-    width: 100%;
-}
 .navbar-light .navbar-toggler{
     border: 0;
     outline: none;
@@ -28,7 +32,36 @@
 .switch-language{
     margin-left: 10px;
 }
+.switch-language button{
+    margin: 0px 5px;
+}
 button.active{
     background-color: #b6c5d2;;
     border-color: #d3d9df;
+}
+
+@media (max-width: 575.98px) {
+
+}
+
+@media (max-width: 767.98px) {
+
+}
+
+@media (max-width: 991.98px) {
+    .switch-language {
+        margin: 15px auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+    }
+    .switch-language button{
+        max-width: 45px;
+        margin: 0px 10px;
+    }
+}
+
+@media (max-width: 1199.98px) {
+
 }

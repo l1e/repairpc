@@ -64,7 +64,7 @@ class MenuPrepare extends React.Component{
                 <Container >
                     <Row>
                         <Col>
-                            <Navbar inverse fluid collapseOnSelect expand="lg" >
+                            <Navbar bs-navbar-collapse inverse fluid collapseOnSelect expand="lg" >
                                 <Navbar.Brand >
                                     <NavLink  to='/'>
                                         <img className="logo" src={goalImg} alt=""/>
