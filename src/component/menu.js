@@ -21,6 +21,19 @@ class MenuPrepare extends React.Component{
             buttonEn: 'active'
         };
     }
+
+    componentDidMount(){
+        let getCurrLanguage = i18n.language;
+
+        if (getCurrLanguage =='ru'){
+            this.setState(
+                {buttonRu: 'active',
+                    buttonEn: 'pasive'}
+            )
+        }
+
+    }
+
     render(){
         const { t } = this.props;
         const changeLanguage = lng => {

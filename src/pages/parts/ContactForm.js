@@ -7,18 +7,22 @@ import Button from 'react-bootstrap/Button';
 import imgContact from '../../images/contact3.png';
 import Form from 'react-bootstrap/Form';
 
+import { withTranslation, Trans  } from 'react-i18next';
+import i18n from '../../component/i18n';
 
 import '../../style/ContactForm.css';
 
-class ContactForm extends  Component{
+class ContactFormPrepare extends  Component{
     render(){
+
+        const { t } = this.props;
         return(
             <Fragment>
                 <div className="section-contact section">
                     <Container >
                         <Row >
                             <Col lg='12'>
-                                <h2 className='section-contact__title section-title'>Свяжитесь с нами</h2>
+                                <h2 className='section-contact__title section-title'><Trans i18nKey="contact_title">Contact us</Trans></h2>
                             </Col>
                             <Col lg='6'>
                                 <div className="contact-left">
@@ -29,20 +33,20 @@ class ContactForm extends  Component{
                             <Col lg='6'>
                                 <div className="contact">
                                     <p className="contact__title">
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad cum dolor, dolorem hic in qui repudiandae suscipit ullam voluptas!  Accusamus debitis deleniti eveniet excepturi in laborum, libero provident quae voluptatem.
+                                        <Trans i18nKey="contact_desc">We perform a full range of services in the field of smartphone repair in Kiev. We carry out a detailed diagnosis of the device, identify the failure and its degree, and advise the client.</Trans>
                                     </p>
 
                                     <Form className='contact-form'>
                                         <Form.Group controlId="formGroupEmail">
-                                            <Form.Label>Почта</Form.Label>
-                                            <Form.Control type="email" placeholder="Введите имейл" />
+                                            <Form.Label><Trans i18nKey="contact_label_email">Почта</Trans></Form.Label>
+                                            <Form.Control type="email" placeholder={t('contact_placeholder_email')} />
                                         </Form.Group>
                                         <Form.Group controlId="formGroupPassword">
-                                            <Form.Label>Номер телефона</Form.Label>
-                                            <Form.Control type="number" placeholder="Ваш номер телефона" />
+                                            <Form.Label><Trans i18nKey="contact_label_phone">Номер телефона</Trans></Form.Label>
+                                            <Form.Control type="number" placeholder={t('contact_placeholder_phone')} />
                                         </Form.Group>
                                         <Button className='contact-form__button' variant="primary" type="submit">
-                                            Отправить
+                                            <Trans i18nKey="contact_submit">Отправить</Trans>
                                         </Button>
                                     </Form>
 
@@ -55,6 +59,6 @@ class ContactForm extends  Component{
         )
     }
 }
-
+const ContactForm = withTranslation()(ContactFormPrepare);
 
 export default ContactForm;

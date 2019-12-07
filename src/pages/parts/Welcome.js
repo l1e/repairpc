@@ -5,15 +5,15 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
-import { useTranslation, Trans } from "react-i18next";
+import { withTranslation, Trans } from "react-i18next";
+import i18n from "../../component/i18n";
 
-function  Welcome (){
-
-    const { t, i18n } = useTranslation();
-
-    const changeLanguage = lng => {
-        i18n.changeLanguage(lng);
-    };
+class  WelcomePrepare extends React.Component{
+    render(){
+        const { t } = this.props;
+        const changeLanguage = lng => {
+            i18n.changeLanguage(lng);
+        };
         return(
             <Fragment>
                 <div className="section-one">
@@ -21,14 +21,10 @@ function  Welcome (){
                         <Row>
                             <Col lg='4'>
                                 <h2 className='section-one__title '>
-                                    <Trans i18nKey="welcome">trans</Trans>
+                                    <Trans i18nKey="welcome_title"></Trans>
                                 </h2>
                                 <p className="section-one__text">
-
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                    Accusamus accusantium amet assumenda autem commodi deleniti,
-                                    dolores eligendi enim eveniet explicabo, iure nihil nisi non quo totam ut vitae,
-                                    voluptas voluptatibus?
+                                    <Trans i18nKey="welcome_desc"></Trans>
                                 </p>
                             </Col>
                         </Row>
@@ -36,6 +32,9 @@ function  Welcome (){
                 </div>
             </Fragment>
         )
+    }
 }
+
+const Welcome = withTranslation()(WelcomePrepare);
 
 export default Welcome;
