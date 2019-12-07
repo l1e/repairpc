@@ -9,14 +9,16 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 
-import { useTranslation, Trans } from "react-i18next";
+import { withTranslation, Trans  } from 'react-i18next';
 import i18n from './i18n';
 
-function Menu() {
+class MenuPrepare extends React.Component{
+
+render(){
+    const { t } = this.props;
     const changeLanguage = lng => {
         i18n.changeLanguage(lng);
     };
-    const { t, i18n } = useTranslation();
     return (
         <Fragment >
             <Container >
@@ -55,5 +57,7 @@ function Menu() {
         </Fragment>
     )
 }
+}
+const Menu = withTranslation()(MenuPrepare);
 
 export default Menu;

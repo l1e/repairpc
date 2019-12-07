@@ -14,6 +14,7 @@ i18n
                     menu_main: "Главная",
                     menu_serv: "Услуги",
                     menu_cont: "Контакты",
+                    "Welcome to React": "Welcome to React and react-i18next"
                 }
             },
             en: {
@@ -24,10 +25,11 @@ i18n
                     menu_main: "Main",
                     menu_serv: "Services",
                     menu_cont: "Contact",
+                    "Welcome to React": "Welcome to React and react-i18next"
                 }
             }
         },
-        fallbackLng: "en",
+        fallbackLng: "ru",
         debug: true,
 
         // have a common namespace used around the full app
