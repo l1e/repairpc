@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="deb44048-49c2-46ac-afb6-255c7a6b84e4" name="Default" comment="" />
+    <list default="true" id="deb44048-49c2-46ac-afb6-255c7a6b84e4" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -71,7 +73,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Menu.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Menu.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/component/Menu.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="384">
@@ -79,6 +81,15 @@
               <folding>
                 <element signature="e#0#44#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="96">
+              <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -149,6 +160,7 @@
         <option value="$PROJECT_DIR$/src/pages/parts/Welcome.js" />
         <option value="$PROJECT_DIR$/src/component/i18n.js" />
         <option value="$PROJECT_DIR$/src/component/Menu.js" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -168,7 +180,7 @@
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="244" />
     <option name="y" value="-8" />
     <option name="width" value="969" />
@@ -185,41 +197,6 @@
             <path>
               <item name="repairpc" type="b2602c69:ProjectViewProjectNode" />
               <item name="repairpc" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="repairpc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="repairpc" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="repairpc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="repairpc" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="repairpc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="repairpc" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="component" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="repairpc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="repairpc" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="repairpc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="repairpc" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="parts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="repairpc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="repairpc" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="style" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -268,12 +245,12 @@
       <option name="presentableId" value="Default" />
       <updated>1575190535482</updated>
       <workItem from="1575190536892" duration="57710000" />
-      <workItem from="1575711920510" duration="5537000" />
+      <workItem from="1575711920510" duration="6188000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63247000" />
+    <option name="totallyTimeSpent" value="63898000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="54" y="-8" width="1234" height="1040" extended-state="6" />
@@ -613,6 +590,13 @@
           <folding>
             <element signature="e#0#44#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
         </state>
       </provider>
     </entry>
