@@ -28,3 +28,7 @@
 .switch-language{
     margin-left: 10px;
 }
+button.active{
+    background-color: #b6c5d2;;
+    border-color: #d3d9df;
+}
