@@ -4,8 +4,6 @@
     <list default="true" id="deb44048-49c2-46ac-afb6-255c7a6b84e4" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/menu.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/style/Menu.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/style/Menu.css" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -106,8 +104,8 @@
       <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+            <state relative-caret-position="112">
+              <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -198,7 +196,7 @@
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="384" />
     <option name="y" value="-11" />
     <option name="width" value="969" />
@@ -293,15 +291,15 @@
       <option name="presentableId" value="Default" />
       <updated>1575190535482</updated>
       <workItem from="1575190536892" duration="57710000" />
-      <workItem from="1575711920510" duration="8572000" />
+      <workItem from="1575711920510" duration="8680000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66282000" />
+    <option name="totallyTimeSpent" value="66390000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="54" y="-8" width="1234" height="1040" extended-state="7" />
+    <frame x="54" y="-8" width="1234" height="1040" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17725752" />
@@ -643,8 +641,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        <state relative-caret-position="112">
+          <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
         </state>
       </provider>
     </entry>
