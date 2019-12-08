@@ -5,6 +5,12 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
 class ServiceSingle extends  Component{
+
+    // componentDidMount() {
+    //     const { match: { params } } = this.props;
+    //
+    //     console.log(params);
+    // }
     render(){
         return(
             <Fragment>
@@ -22,5 +28,6 @@ class ServiceSingle extends  Component{
     }
 }
 
+// console.log({this.props.params});
 
 export default ServiceSingle;

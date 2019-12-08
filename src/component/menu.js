@@ -14,6 +14,10 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 
+import createHistory from 'history/createBrowserHistory'
+const history = createHistory();
+
+
 class MenuPrepare extends React.Component{
 
     constructor(props) {
@@ -44,7 +48,7 @@ class MenuPrepare extends React.Component{
             i18n.changeLanguage(lng);
             // this.forceUpdate();
             // appHistory.push('/');
-
+            history.go(0);
         };
         const changeActive = (lang)=>{
             console.log('active lang is:'+lang);

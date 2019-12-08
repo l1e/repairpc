@@ -22,7 +22,8 @@ i18n
                     contact_placeholder_email:'Введите емейл',
                     contact_placeholder_phone:'Ваш номер телефона',
                     contact_submit:'Отправить',
-                    services_title: "Наши услуги"
+                    services_title: "Наши услуги",
+                    services_detailed:"Подробнее"
 
                 }
             },
@@ -42,7 +43,8 @@ i18n
                     contact_placeholder_email:'Enter email',
                     contact_placeholder_phone:'Your phone number',
                     contact_submit:'Send',
-                    services_title: "Our Services"
+                    services_title: "Our Services",
+                    services_detailed:"Read more"
                 }
             }
         },
