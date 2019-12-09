@@ -7,7 +7,7 @@ import {Link} from "react-router-dom";
 import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 
-import imgRepairPc from '../../images/services_repairpc.png';
+import imgRepairPc from '../../images/services_repairpc.webp';
 import { Trans, withTranslation  } from 'react-i18next';
 
 class ServicePrepare extends  Component{
@@ -63,7 +63,7 @@ class ServicePrepare extends  Component{
                                         item.en.descr
                                     )}
                                 </p>
-                                <Link to={"ServiceSingle/?id="+item.id} id={item.id}>
+                                <Link to={"ConverLink/"+item.id} id={item.id}>
                                     <Button className='box__button' variant="primary"> <Trans i18nKey="services_detailed">Наши услуги</Trans></Button>
                                 </Link>
                             </div>

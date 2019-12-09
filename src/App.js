@@ -11,8 +11,7 @@ import Footer from "./component/Footer";
 import Main from './pages/Main';
 import Services from "./pages/Services";
 import Contact from "./pages/Contact";
-import ServiceSingle from "./pages/ServiceSingle";
-
+import ConverLink from './component/ConverLink';
 function App() {
   return (
       <Router>
@@ -28,8 +27,8 @@ function App() {
                     <Route path="/Contact">
                         <Contact/>
                     </Route>
-                    <Route path="/ServiceSingle">
-                        <ServiceSingle/>
+                    <Route path="/ConverLink/:id">
+                        <ConverLink/>
                     </Route>
                  </Switch>
               <Footer />

@@ -27,6 +27,7 @@ class ServicesPrepare extends  Component{
             let articles = Object.values(data);
             this.setState({ articles });
             console.log(this.state.articles);
+
         });
 
     };
@@ -38,7 +39,9 @@ class ServicesPrepare extends  Component{
                     <Container >
                         <Row className='boxes'>
                             <Col lg='12'>
-                                <h2 className='section-services__title section-title'><Trans i18nKey="services_title">Наши услуги</Trans></h2>
+                                <h2 className='section-services__title section-title'>
+                                    <Trans i18nKey="services_detailed">Наши услуги</Trans>
+                                </h2>
                             </Col>
 
                                 <Service articles={this.state.articles} />
