@@ -5,35 +5,31 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
-import {db} from '../config/firebaseConfig';
 
 import Service from "./parts/Service";
 
-let articlesDb = db.ref('/articles');
+import {isLoaded, isEmpty} from "react-redux-firebase";
+import  {useSelector} from 'react-redux';
 
+function ServicesPrepare (){
+    let newData ;
+    const articlesData = useSelector(state => state.base.data.articles);
 
-class ServicesPrepare extends  Component{
-
-    constructor(props) {
-        super(props);
-        this.state = {
-            articles: []
-        }
+    if (!isLoaded(articlesData)) {
+        console.log(articlesData);
+        return "Loading";
+    }
+    // Show a message if there are no todos
+    if (isEmpty(articlesData)) {
+        console.log(articlesData);
+        return "Todo list is empty";
+    }
+    if (isLoaded(articlesData)) {
+        console.log(Object.values(articlesData));
+        newData = Object.values(articlesData);
+        console.log(articlesData['-LmtiQQmQ4bJ1SS5esff']['en']['descr']);
     }
 
-    componentDidMount() {
-        articlesDb.on('value', snapshot => {
-            let data = snapshot.val();
-            console.log(data);
-            let articles = Object.values(data);
-            this.setState({ articles });
-            console.log(this.state.articles);
-
-        });
-
-    };
-
-    render(){
         return(
             <Fragment>
                 <div className="section-services section">
@@ -45,14 +41,13 @@ class ServicesPrepare extends  Component{
                                 </h2>
                             </Col>
 
-                                <Service articles={this.state.articles} />
+                                <Service articles={newData} />
                         </Row>
                     </Container>
                 </div>
 
             </Fragment>
         )
-    }
 }
 const Services = withTranslation()(ServicesPrepare);
 
