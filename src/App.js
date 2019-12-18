@@ -4,8 +4,9 @@ import './style/App.css';
 import './style/BootstrapSettings.sass';
 
 import './component/i18n';
-import { useFirebase, useFirebaseConnect, isLoaded, isEmpty } from "react-redux-firebase";
+import {useFirebaseConnect} from "react-redux-firebase";
 
+import  {useDispatch} from 'react-redux';
 
 import Header from './component/Header';
 import Footer from "./component/Footer";
@@ -14,7 +15,9 @@ import Main from './pages/Main';
 import Services from "./pages/Services";
 import Contact from "./pages/Contact";
 import ConverLink from './component/ConverLink';
+import i18n from "./component/i18n";
 
+import {getbase} from './store/language/action';
 
 const todosQuery = {
     path: "articles",
@@ -23,6 +26,10 @@ const todosQuery = {
 
 function App() {
     useFirebaseConnect(() => [todosQuery]);
+    let getCurrLanguage = i18n.language;
+    let dispatch  = useDispatch();
+    console.log(getCurrLanguage);
+    dispatch(getbase(getCurrLanguage));
 
   return (
       <Router>

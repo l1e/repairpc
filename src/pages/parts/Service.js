@@ -40,7 +40,7 @@ class ServicePrepare extends  Component{
     }
 
     render(props){
-        console.log(this.props.articles);
+        // console.log(this.props.articles);
         return(
             <Fragment>
                 {

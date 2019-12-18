@@ -18,18 +18,17 @@ function MainPrepare() {
         const articlesData = useSelector(state => state.base.data.articles);
 
         if (!isLoaded(articlesData)) {
-            console.log(articlesData);
             return "Loading";
         }
         // Show a message if there are no todos
         if (isEmpty(articlesData)) {
-            console.log(articlesData);
+            // console.log(articlesData);
             return "Todo list is empty";
         }
     if (isLoaded(articlesData)) {
-        console.log(Object.values(articlesData));
+        // console.log(Object.values(articlesData));
         newData = Object.values(articlesData);
-        console.log(articlesData['-LmtiQQmQ4bJ1SS5esff']['en']['descr']);
+        // console.log(articlesData['-LmtiQQmQ4bJ1SS5esff']['en']['descr']);
     }
         return (
             <Fragment>

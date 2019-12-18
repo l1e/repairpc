@@ -6,8 +6,6 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
-import {useParams} from "react-router-dom";
-
 import {db} from '../config/firebaseConfig';
 import i18n from "../component/i18n";
 let articlesDb = db.ref('/articles');

@@ -1,11 +1,12 @@
 
-import {combineReducers} from 'redux'
+import {combineReducers} from 'redux';
 import { reducer as firebasee } from "react-redux-firebase";
-import myLangReducer from './language/reducer'
+import {myLangReducer,setMyLangReducer} from './language/reducer';
 
 const allReducers = combineReducers({
     base:  firebasee,
-    lang: myLangReducer
+    getLang: myLangReducer,
+    setLang: setMyLangReducer
 });
 
 export default allReducers;
