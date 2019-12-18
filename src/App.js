@@ -18,11 +18,12 @@ import ConverLink from './component/ConverLink';
 
 const todosQuery = {
     path: "articles",
-    queryParams: ["limitToLast=5"]
+    queryParams: ["limitToLast=10"]
 };
 
 function App() {
     useFirebaseConnect(() => [todosQuery]);
+
   return (
       <Router>
           <Fragment>
