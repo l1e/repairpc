@@ -24,6 +24,7 @@ class ServicesPrepare extends  Component{
     componentDidMount() {
         articlesDb.on('value', snapshot => {
             let data = snapshot.val();
+            console.log(data);
             let articles = Object.values(data);
             this.setState({ articles });
             console.log(this.state.articles);
