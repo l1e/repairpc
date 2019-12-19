@@ -1,6 +1,6 @@
 const myFireBaseReducer =( state = false , action) => {
     switch (action.type){
-        case 'GETBASE':
+        case 'GET_BASE':
             return  state = action.payload;
         default:
             return false;

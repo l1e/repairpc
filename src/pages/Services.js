@@ -5,30 +5,10 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
-import Service from "./parts/Service";
+import ContainerService from "./parts/ContainerService";
 
-import {isLoaded, isEmpty} from "react-redux-firebase";
-import  {useSelector} from 'react-redux';
 
 function ServicesPrepare (){
-    let newData ;
-    const articlesData = useSelector(state => state.base.data.articles);
-    const language= useSelector(state=> state.myLang);
-    if (!isLoaded(articlesData)) {
-        // console.log(articlesData);
-        return "Loading";
-    }
-    // Show a message if there are no todos
-    if (isEmpty(articlesData)) {
-        // console.log(articlesData);
-        return "Todo list is empty";
-    }
-    if (isLoaded(articlesData)) {
-        // console.log(Object.values(articlesData));
-        newData = Object.values(articlesData);
-        // console.log(articlesData['-LmtiQQmQ4bJ1SS5esff']['en']['descr']);
-    }
-    console.log(language);
         return(
             <Fragment>
                 <div className="section-services section">
@@ -40,7 +20,7 @@ function ServicesPrepare (){
                                 </h2>
                             </Col>
 
-                                <Service articles={newData} />
+                                <ContainerService/>
                         </Row>
                     </Container>
                 </div>

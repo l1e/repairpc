@@ -10,36 +10,35 @@ import Col from 'react-bootstrap/Col';
 import imgRepairPc from '../../images/services_repairpc.webp';
 import { Trans, withTranslation  } from 'react-i18next';
 
-class ServicePrepare extends  Component{
-    constructor(props){
-        super(props);
-        let getCurrLanguage = i18n.language;
-        this.state={lang: getCurrLanguage}
-    }
-
-    componentDidMount(){
-        let getCurrLanguage = i18n.language;
-        if (getCurrLanguage ==='ru'){
-            this.setState(
-                {
-                    lang: 'ru',
-                }
-            );
-        }else {
-            this.setState(
-                {
-                    lang: 'en',
-                }
-            );
-        }
-        console.log('Component remount');
-
-    }
-    componentWillUnmount() {
-        console.log('Component remount fro,m componentWillUnmount');
-    }
-
-    render(props){
+function ServicePrepare(){
+    console.log(this.props.myLang);
+    // constructor(props){
+    //     super(props);
+    //     let getCurrLanguage = i18n.language;
+    //     this.state={lang: getCurrLanguage}
+    // }
+    //
+    // componentDidMount(){
+    //     let getCurrLanguage = i18n.language;
+    //     if (getCurrLanguage ==='ru'){
+    //         this.setState(
+    //             {
+    //                 lang: 'ru',
+    //             }
+    //         );
+    //     }else {
+    //         this.setState(
+    //             {
+    //                 lang: 'en',
+    //             }
+    //         );
+    //     }
+    //     console.log('Component remount');
+    //
+    // }
+    // componentWillUnmount() {
+    //     console.log('Component remount fro,m componentWillUnmount');
+    // }
         // console.log(this.props.articles);
         return(
             <Fragment>
@@ -51,14 +50,14 @@ class ServicePrepare extends  Component{
                                 <img src={imgRepairPc} alt="" className="box__img"/>
                                 <h3 className="box__title">
 
-                                    {this.state.lang === "ru" ? (
+                                    {this.props.lang === "ru" ? (
                                         item.ru.title
                                     ) : (
                                         item.en.title
                                     )}
                                     </h3>
                                 <p className="box__description">
-                                    {this.state.lang === "ru" ? (
+                                    {this.props.lang === "ru" ? (
                                         item.ru.descr
                                     ) : (
                                         item.en.descr
@@ -73,7 +72,6 @@ class ServicePrepare extends  Component{
                 })};
             </Fragment>
         )
-    }
 }
 const Service = withTranslation()(ServicePrepare);
 

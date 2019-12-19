@@ -7,29 +7,13 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
-import Service from "./parts/Service";
+import ContainerService from "./parts/ContainerService";
 import ContactForm from "./parts/ContactForm";
 import Welcome from "./parts/Welcome";
 import {isLoaded, isEmpty} from "react-redux-firebase";
 import  {useSelector} from 'react-redux';
 
 function MainPrepare() {
-        let newData ;
-        const articlesData = useSelector(state => state.base.data.articles);
-
-        if (!isLoaded(articlesData)) {
-            return "Loading";
-        }
-        // Show a message if there are no todos
-        if (isEmpty(articlesData)) {
-            // console.log(articlesData);
-            return "Todo list is empty";
-        }
-    if (isLoaded(articlesData)) {
-        // console.log(Object.values(articlesData));
-        newData = Object.values(articlesData);
-        // console.log(articlesData['-LmtiQQmQ4bJ1SS5esff']['en']['descr']);
-    }
         return (
             <Fragment>
                 <Welcome/>
@@ -40,7 +24,7 @@ function MainPrepare() {
                                 <h2 className='section-services__title section-title'><Trans i18nKey="services_title">Наши
                                     услуги</Trans></h2>
                             </Col>
-                            <Service articles={newData}/>
+                            <ContainerService />
                         </Row>
                     </Container>
                 </div>
