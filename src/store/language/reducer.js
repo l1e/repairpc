@@ -3,7 +3,7 @@ export  const myLangReducer =( state = false , action) => {
         case 'GET_LANG':
             return  action.payload;
         default:
-            return false;
+            return state;
 
     }
     return state;
@@ -14,7 +14,7 @@ export  const setMyLangReducer =( state = true , action) => {
         case 'SET_LANG':
             return   action.payload;
         default:
-            return false;
+            return state;
     }
     return state;
 };

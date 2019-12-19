@@ -2,7 +2,7 @@ const GET_LANG = 'GET_LANG';
 const SET_LANG = 'SET_LANG';
 
 
-export const getbase = (lang) =>{
+export const getBase = (lang) =>{
   return{
       type: GET_LANG,
       payload: lang
