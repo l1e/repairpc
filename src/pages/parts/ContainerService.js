@@ -21,9 +21,10 @@ function ContainerService (){
         newData = Object.values(articlesData);
         // console.log(articlesData['-LmtiQQmQ4bJ1SS5esff']['en']['descr']);
     }
-    console.log(language);
+    // console.log(language);
+    // console.log(newData);
     return(
-        <Service lang={'ru'} articles={newData} />
+        <Service lang={language} articles={newData} />
     )
 }
 

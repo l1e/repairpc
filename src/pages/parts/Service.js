@@ -11,7 +11,7 @@ import imgRepairPc from '../../images/services_repairpc.webp';
 import { Trans, withTranslation  } from 'react-i18next';
 
 function ServicePrepare(){
-    console.log(this.props.myLang);
+    console.log(this.props.articles);
     // constructor(props){
     //     super(props);
     //     let getCurrLanguage = i18n.language;
@@ -45,31 +45,32 @@ function ServicePrepare(){
                 {
                     this.props.articles.map((item, index) => {
                     return (
-                        <Col key={index} lg='4' md='6' sm='12'>
-                            <div className='box' >
-                                <img src={imgRepairPc} alt="" className="box__img"/>
-                                <h3 className="box__title">
+                            <Col key={index} lg='4' md='6' sm='12'>
+                                <div className='box' >
+                                    <img src={imgRepairPc} alt="" className="box__img"/>
+                                    <h3 className="box__title">
 
-                                    {this.props.lang === "ru" ? (
-                                        item.ru.title
-                                    ) : (
-                                        item.en.title
-                                    )}
-                                    </h3>
-                                <p className="box__description">
-                                    {this.props.lang === "ru" ? (
-                                        item.ru.descr
-                                    ) : (
-                                        item.en.descr
-                                    )}
-                                </p>
-                                <Link to={"ConverLink/"+item.id} id={item.id}>
-                                    <Button className='box__button' variant="primary"> <Trans i18nKey="services_detailed">Наши услуги</Trans></Button>
-                                </Link>
-                            </div>
-                        </Col>
-                    );
-                })};
+                                        {this.props.lang === "ru" ? (
+                                            item.ru.title
+                                        ) : (
+                                            item.en.title
+                                        )}
+                                        </h3>
+                                    <p className="box__description">
+                                        {this.props.lang === "ru" ? (
+                                            item.ru.descr
+                                        ) : (
+                                            item.en.descr
+                                        )}
+                                    </p>
+                                    <Link to={"ConverLink/"+item.id} id={item.id}>
+                                        <Button className='box__button' variant="primary"> <Trans i18nKey="services_detailed">Наши услуги</Trans></Button>
+                                    </Link>
+                                </div>
+                            </Col>
+                        );
+                    })
+                };
             </Fragment>
         )
 }
