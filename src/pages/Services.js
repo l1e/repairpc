@@ -13,7 +13,7 @@ import  {useSelector} from 'react-redux';
 function ServicesPrepare (){
     let newData ;
     const articlesData = useSelector(state => state.base.data.articles);
-    const language= useSelector(state=> state.getLang);
+    const language= useSelector(state=> state.myLang);
     if (!isLoaded(articlesData)) {
         // console.log(articlesData);
         return "Loading";

@@ -5,7 +5,7 @@ import {myLangReducer,setMyLangReducer} from './language/reducer';
 
 const allReducers = combineReducers({
     base:  firebasee,
-    getLang: myLangReducer,
+    myLang: myLangReducer,
     setLang: setMyLangReducer
 });
 

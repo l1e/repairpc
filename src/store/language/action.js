@@ -1,10 +1,10 @@
-const GET_LANG = 'GET_LANG';
+const MY_LANG = 'MY_LANG';
 const SET_LANG = 'SET_LANG';
 
 
-export const getBase = (lang) =>{
+export const myLang = (lang) =>{
   return{
-      type: GET_LANG,
+      type: MY_LANG,
       payload: lang
   }
 };

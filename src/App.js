@@ -17,7 +17,7 @@ import Contact from "./pages/Contact";
 import ConverLink from './component/ConverLink';
 import i18n from "./component/i18n";
 
-import {getBase} from './store/language/action';
+import {myLang} from './store/language/action';
 
 const todosQuery = {
     path: "articles",
@@ -29,7 +29,7 @@ function App() {
     let getCurrLanguage = i18n.language;
     let dispatch  = useDispatch();
     console.log(getCurrLanguage);
-    dispatch(getBase(getCurrLanguage));
+    dispatch(myLang(getCurrLanguage));
 
   return (
       <Router>
