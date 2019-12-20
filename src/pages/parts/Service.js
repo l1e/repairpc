@@ -10,54 +10,25 @@ import Col from 'react-bootstrap/Col';
 import imgRepairPc from '../../images/services_repairpc.webp';
 import { Trans, withTranslation  } from 'react-i18next';
 
-function ServicePrepare(){
-    console.log(this.props.articles);
-    // constructor(props){
-    //     super(props);
-    //     let getCurrLanguage = i18n.language;
-    //     this.state={lang: getCurrLanguage}
-    // }
-    //
-    // componentDidMount(){
-    //     let getCurrLanguage = i18n.language;
-    //     if (getCurrLanguage ==='ru'){
-    //         this.setState(
-    //             {
-    //                 lang: 'ru',
-    //             }
-    //         );
-    //     }else {
-    //         this.setState(
-    //             {
-    //                 lang: 'en',
-    //             }
-    //         );
-    //     }
-    //     console.log('Component remount');
-    //
-    // }
-    // componentWillUnmount() {
-    //     console.log('Component remount fro,m componentWillUnmount');
-    // }
-        // console.log(this.props.articles);
+function ServicePrepare(props){
+    let myActiveLanguage = props.lang;
         return(
-            <Fragment>
-                {
-                    this.props.articles.map((item, index) => {
+            <Fragment>{
+                    props.articles.map((item, index) => {
                     return (
                             <Col key={index} lg='4' md='6' sm='12'>
                                 <div className='box' >
                                     <img src={imgRepairPc} alt="" className="box__img"/>
                                     <h3 className="box__title">
 
-                                        {this.props.lang === "ru" ? (
+                                        {myActiveLanguage === "ru" ? (
                                             item.ru.title
                                         ) : (
                                             item.en.title
                                         )}
                                         </h3>
                                     <p className="box__description">
-                                        {this.props.lang === "ru" ? (
+                                        {myActiveLanguage === "ru" ? (
                                             item.ru.descr
                                         ) : (
                                             item.en.descr

@@ -10,9 +10,6 @@ import Col from 'react-bootstrap/Col';
 import ContainerService from "./parts/ContainerService";
 import ContactForm from "./parts/ContactForm";
 import Welcome from "./parts/Welcome";
-import {isLoaded, isEmpty} from "react-redux-firebase";
-import  {useSelector} from 'react-redux';
-
 function MainPrepare() {
         return (
             <Fragment>

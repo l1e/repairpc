@@ -19,7 +19,6 @@ function ServicesPrepare (){
                                     <Trans i18nKey="services_detailed">Наши услуги</Trans>
                                 </h2>
                             </Col>
-
                                 <ContainerService/>
                         </Row>
                     </Container>
