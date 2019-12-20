@@ -42,7 +42,7 @@ class ContactFormPrepare extends  Component{
                                         </Form.Group>
                                         <Form.Group controlId="formGroupPassword">
                                             <Form.Label><Trans i18nKey="contact_label_phone">Номер телефона</Trans></Form.Label>
-                                            <Form.Control type="number" placeholder={t('contact_placeholder_phone')} />
+                                            <Form.Control type="tel" min="11" max="14" placeholder={t('contact_placeholder_phone')} />
                                         </Form.Group>
                                         <Button className='contact-form__button' variant="primary" type="submit">
                                             <Trans i18nKey="contact_submit">Отправить</Trans>
