@@ -1,4 +1,4 @@
-import React,{Fragment } from "react";
+import React,{Fragment, useState } from "react";
 import {NavLink} from 'react-router-dom';
 import { withTranslation, Trans  } from 'react-i18next';
 import i18n from './i18n';
@@ -23,6 +23,8 @@ const history = createHistory();
 
 
 function MenuPrepare (){
+    //Here we have two const for collapse menu.
+    const [expanded, setExpanded] = useState(false);
     let myActiveLanguage ;
     let buttonRu = 'pasive';
     let buttonEn = 'active';
@@ -94,26 +96,33 @@ function MenuPrepare (){
                 <Container >
                     <Row>
                         <Col>
-                            <Navbar  inverse='true' collapseOnSelect expand="lg" >
+                            <Navbar expanded={expanded}  inverse='true' collapseOnSelect={true} expand="lg" >
                                 <Navbar.Brand >
                                     <NavLink  to='/'>
                                         <img className="logo" src={goalImg} alt=""/>
                                     </NavLink>
                                 </Navbar.Brand>
 
-                                <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                                <Navbar.Toggle onClick={() => setExpanded(expanded ? false : "expanded")} aria-controls="responsive-navbar-nav" />
                                 <Navbar.Collapse id="responsive-navbar-nav">
 
                                     <Nav className="ml-auto">
                                         <li className="menu-item">
-                                            <NavLink className="nav-link" activeClassName={"active"} exact={true} to="/"><Trans i18nKey="menu_main">Главная</Trans></NavLink>
+                                            <NavLink onClick={()=>{setExpanded(false)}} eventKey="1"  className="nav-link" activeClassName={"active"} exact={true} to="/">
+                                                <Trans i18nKey="menu_main">Главная</Trans>
+                                            </NavLink>
                                         </li>
                                         <li className="menu-item">
-                                            <NavLink className="nav-link" activeClassName="active" to="/Services" ><Trans i18nKey="menu_serv">Услуги</Trans></NavLink>
+                                            <NavLink onClick={()=>{setExpanded(false)}}  eventKey="2" className="nav-link" activeClassName="active" to="/Services" >
+                                                <Trans i18nKey="menu_serv">Услуги</Trans>
+                                            </NavLink>
                                         </li>
                                         <li className="menu-item">
-                                            <NavLink className="nav-link" activeClassName="active" to="/Contact" ><Trans i18nKey="menu_cont">Контакты </Trans> </NavLink>
+                                            <NavLink onClick={()=>{setExpanded(false)}} eventKey="3"  className="nav-link" activeClassName="active" to="/Contact" >
+                                                <Trans i18nKey="menu_cont">Контакты </Trans>
+                                            </NavLink>
                                         </li>
+
                                         <Nav className="switch-language">
                                             <Button className={buttonRu}  variant="light" onClick={() =>
                                             {changeLanguage("ru");
