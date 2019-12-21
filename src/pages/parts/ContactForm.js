@@ -1,5 +1,6 @@
 import React,{Fragment,Component} from 'react';
 import { withTranslation, Trans  } from 'react-i18next';
+import useForm from 'react-hook-form';
 
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -9,12 +10,19 @@ import imgContact from '../../images/contact3.webp';
 import Form from 'react-bootstrap/Form';
 
 
+
 import '../../style/ContactForm.css';
 
-class ContactFormPrepare extends  Component{
-    render(){
-
-        const { t } = this.props;
+function ContactFormPrepare (props){
+    const { register, handleSubmit, errors } = useForm({
+        // by setting validateCriteriaMode to 'all',
+        // all validation errors for single field will display at once
+        validateCriteriaMode: "all"
+    }); // initialise the hook
+    const onSubmit = data => {
+        console.log(data);
+    };
+        const { t } = props;
         return(
             <Fragment>
                 <div className="section-contact section">
@@ -35,14 +43,24 @@ class ContactFormPrepare extends  Component{
                                         <Trans i18nKey="contact_desc">We perform a full range of services in the field of smartphone repair in Kiev. We carry out a detailed diagnosis of the device, identify the failure and its degree, and advise the client.</Trans>
                                     </p>
 
-                                    <Form className='contact-form'>
+                                    <Form onSubmit={handleSubmit(onSubmit)} className='contact-form'>
                                         <Form.Group controlId="formGroupEmail">
                                             <Form.Label><Trans i18nKey="contact_label_email">Почта</Trans></Form.Label>
-                                            <Form.Control type="email" placeholder={t('contact_placeholder_email')} />
+                                            <Form.Control name="email" ref={register({ required: true, minLength: 5, maxLength: 30 })} type="email" placeholder={t('contact_placeholder_email')} />
+                                            <p className="error">
+                                                {errors.email && errors.email.types.required && (<Trans i18nKey="contact_error_email_required">Почтовый адрес является обязательным</Trans>)}
+                                                {errors.email && errors.email.types.minLength && (<Trans i18nKey="contact_error_email_minlenght">Минимальное количество символов 5</Trans>)}
+                                                {errors.email && errors.email.types.maxLength && (<Trans i18nKey="contact_error_email_maxlenght">Максимальное количество символов 30</Trans>)}
+                                                </p>
                                         </Form.Group>
                                         <Form.Group controlId="formGroupPassword">
                                             <Form.Label><Trans i18nKey="contact_label_phone">Номер телефона</Trans></Form.Label>
-                                            <Form.Control type="tel" min="11" max="14" placeholder={t('contact_placeholder_phone')} />
+                                            <Form.Control name="phone" ref={register({ required: true, minLength: 10, maxLength: 13 })} type="tel"  placeholder={t('contact_placeholder_phone')} />
+                                            <p className="error">
+                                                {errors.phone && errors.phone.types.required && (<Trans i18nKey="contact_error_phone_required">Почтовый адрес является обязательным</Trans>)}
+                                                {errors.phone && errors.phone.types.minLength && (<Trans i18nKey="contact_error_phone_minlenght">Минимальное количество символов 10</Trans>)}
+                                                {errors.phone && errors.phone.types.maxLength && (<Trans i18nKey="contact_error_phone_maxlenght">Максимальное количество символов 13</Trans>)}
+                                            </p>
                                         </Form.Group>
                                         <Button className='contact-form__button' variant="primary" type="submit">
                                             <Trans i18nKey="contact_submit">Отправить</Trans>
@@ -56,7 +74,6 @@ class ContactFormPrepare extends  Component{
                 </div>
             </Fragment>
         )
-    }
 }
 const ContactForm = withTranslation()(ContactFormPrepare);
 

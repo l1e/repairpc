@@ -22,6 +22,12 @@ i18n
                     contact_placeholder_email:'Введите емейл',
                     contact_placeholder_phone:'Ваш номер телефона',
                     contact_submit:'Отправить',
+                    contact_error_email_required: "Почтовый адрес является обязательным",
+                    contact_error_email_minlenght: "Минимальное количество символов 5",
+                    contact_error_email_maxlenght: "Максимальное количество символов 20",
+                    contact_error_phone_required: "Номер телефона явлыется обязательным",
+                    contact_error_phone_minlenght: "Минимальное количество символов 10",
+                    contact_error_phone_maxlenght: "Максимальное количество символов 13",
                     services_title: "Наши услуги",
                     services_detailed:"Подробнее"
 
@@ -43,6 +49,12 @@ i18n
                     contact_placeholder_email:'Enter email',
                     contact_placeholder_phone:'Your phone number',
                     contact_submit:'Send',
+                    contact_error_email_required: "Email is required",
+                    contact_error_email_minlenght: "The minimum number of characters is 5",
+                    contact_error_email_maxlenght: "The maximum number of characters is 30",
+                    contact_error_phone_required: "Phone is required",
+                    contact_error_phone_minlenght: "The minimum number of characters is 10",
+                    contact_error_phone_maxlenght: "The maximum number of characters is 13",
                     services_title: "Our Services",
                     services_detailed:"Read more"
                 }

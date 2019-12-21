@@ -96,14 +96,14 @@ function MenuPrepare (){
                 <Container >
                     <Row>
                         <Col>
-                            <Navbar expanded={expanded}  inverse='true' collapseOnSelect={true} expand="lg" >
+                            <Navbar onClick={() => setExpanded(expanded ? false : "expanded")} expanded={expanded}  inverse='true' collapseOnSelect={true} expand="lg" >
                                 <Navbar.Brand >
-                                    <NavLink  to='/'>
+                                    <NavLink onClick={()=>{setExpanded(false)}}  to='/'>
                                         <img className="logo" src={goalImg} alt=""/>
                                     </NavLink>
                                 </Navbar.Brand>
 
-                                <Navbar.Toggle onClick={() => setExpanded(expanded ? false : "expanded")} aria-controls="responsive-navbar-nav" />
+                                <Navbar.Toggle  aria-controls="responsive-navbar-nav" />
                                 <Navbar.Collapse id="responsive-navbar-nav">
 
                                     <Nav className="ml-auto">
