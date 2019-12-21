@@ -28,6 +28,8 @@ function MenuPrepare (){
     let myActiveLanguage ;
     let buttonRu = 'pasive';
     let buttonEn = 'active';
+    let mobileWidth= window.innerWidth;
+    let mobileMenu = false;
     const dispatch = useDispatch();
     const myStoreLang = useSelector(state => state.myLang);
     if (!isLoaded(myStoreLang)) {
@@ -53,6 +55,25 @@ function MenuPrepare (){
         // console.log(articlesData['-LmtiQQmQ4bJ1SS5esff']['en']['descr']);
     }
     console.log(myActiveLanguage);
+    // console.log(window.innerWidth);
+
+    if (mobileWidth < 993){
+        mobileMenu = true;
+    }else{
+        mobileMenu = false;
+    }
+    window.addEventListener("resize", ()=>{
+        console.log(myActiveLanguage);
+        mobileWidth = window.innerWidth;
+
+        if (mobileWidth < 993){
+            mobileMenu = true;
+        }else{
+            mobileMenu = false;
+        }
+        console.log(mobileMenu);
+    });
+
     // constructor(props) {
     //     super(props);
     //     this.state = {
@@ -96,46 +117,84 @@ function MenuPrepare (){
                 <Container >
                     <Row>
                         <Col>
-                            <Navbar onClick={() => setExpanded(expanded ? false : "expanded")} expanded={expanded}  inverse='true' collapseOnSelect={true} expand="lg" >
-                                <Navbar.Brand >
-                                    <NavLink onClick={()=>{setExpanded(false)}}  to='/'>
+                            <Navbar
+                                    expanded={expanded}  inverse='true' collapseOnSelect={true} expand="lg" >
+                                <Navbar.Brand onClick={() =>{
+                                    if (mobileWidth < 993){
+                                        setExpanded( false)}
+                                    }
+
+                                }>
+                                    <NavLink
+                                        onClick={()=>{
+                                            setExpanded(false);
+                                        }}
+                                        to='/'>
                                         <img className="logo" src={goalImg} alt=""/>
                                     </NavLink>
                                 </Navbar.Brand>
 
-                                <Navbar.Toggle  aria-controls="responsive-navbar-nav" />
+                                <Navbar.Toggle
+                                    onClick={() =>{
+                                        setExpanded(expanded ? false : "expanded")
+                                    }}
+                                    aria-controls="responsive-navbar-nav" />
                                 <Navbar.Collapse id="responsive-navbar-nav">
 
                                     <Nav className="ml-auto">
                                         <li className="menu-item">
-                                            <NavLink onClick={()=>{setExpanded(false)}} eventKey="1"  className="nav-link" activeClassName={"active"} exact={true} to="/">
+                                            <NavLink
+                                                onClick={()=>{
+                                                        setExpanded(false);
+                                                }}
+                                                eventKey="1"
+                                                className="nav-link"
+                                                activeClassName={"active"}
+                                                exact={true}
+                                                to="/">
                                                 <Trans i18nKey="menu_main">Главная</Trans>
                                             </NavLink>
                                         </li>
                                         <li className="menu-item">
-                                            <NavLink onClick={()=>{setExpanded(false)}}  eventKey="2" className="nav-link" activeClassName="active" to="/Services" >
+                                            <NavLink
+                                                onClick={()=>{
+                                                    setExpanded(false);
+                                                }}
+                                                eventKey="2"
+                                                className="nav-link"
+                                                activeClassName="active"
+                                                to="/Services" >
                                                 <Trans i18nKey="menu_serv">Услуги</Trans>
                                             </NavLink>
                                         </li>
                                         <li className="menu-item">
-                                            <NavLink onClick={()=>{setExpanded(false)}} eventKey="3"  className="nav-link" activeClassName="active" to="/Contact" >
+                                            <NavLink
+                                                onClick={()=>{
+                                                    setExpanded(false);
+                                                }}
+                                                eventKey="3"
+                                                className="nav-link"
+                                                activeClassName="active"
+                                                to="/Contact" >
                                                 <Trans i18nKey="menu_cont">Контакты </Trans>
                                             </NavLink>
                                         </li>
 
                                         <Nav className="switch-language">
-                                            <Button className={buttonRu}  variant="light" onClick={() =>
-                                            {changeLanguage("ru");
-                                             changeActive("ru");
-                                             dispatch(myLang('ru'));
-                                            }
-                                            }>ru</Button >
-                                            <Button className={buttonEn} variant="light" onClick={() =>
-                                            {changeLanguage("en");
-                                             changeActive("en");
-                                             dispatch(myLang('en'));
-                                            }
-                                            }>en</Button >
+                                            <Button className={buttonRu}  variant="light"
+                                                onClick={() => {
+                                                    changeLanguage("ru");
+                                                    changeActive("ru");
+                                                    dispatch(myLang('ru'));
+                                                }}
+                                            >ru</Button >
+                                            <Button className={buttonEn} variant="light"
+                                                onClick={() => {
+                                                    changeLanguage("en");
+                                                    changeActive("en");
+                                                    dispatch(myLang('en'));
+                                                }}
+                                            >en</Button >
                                         </Nav>
                                     </Nav>
                                 </Navbar.Collapse>
