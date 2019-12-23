@@ -180,6 +180,18 @@ function MenuPrepare (){
                                                 <Trans i18nKey="menu_about">О нас </Trans>
                                             </NavLink>
                                         </li>
+                                        <li className="menu-item">
+                                            <NavLink
+                                                onClick={()=>{
+                                                    setExpanded(false);
+                                                }}
+                                                eventKey="3"
+                                                className="nav-link"
+                                                activeClassName="active"
+                                                to="/Price" >
+                                                <Trans i18nKey="menu_price">Прайс</Trans>
+                                            </NavLink>
+                                        </li>
 
                                         <li className="menu-item">
                                             <NavLink

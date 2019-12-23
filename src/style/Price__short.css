@@ -1,0 +1,46 @@
+.price{
+    width: 100%;
+    height: 50px;
+}
+.price-label{
+    background-color: linen;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #5a6268;
+}
+.price-label__name{
+    width: 40%;
+    height: 50px;
+    border-right: 1px solid #5a6268;
+}
+
+.price-label__price{
+    width: 60%;
+    height: 50px;
+}
+.price-label p, .price-row p{
+    padding: 0px;
+    margin: 0px;
+    line-height: 50px;
+    text-align: center;
+}
+
+.price-row{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #5a6268;
+    border-top: 0;
+}
+.price-row__name{
+    width: 40%;
+    border-right: 1px solid #5a6268;
+}
+.price-row__price{
+    width: 60%;
+}
+.price-row__text{
+    text-align: center;
+    line-height: 50px;
+}

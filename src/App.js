@@ -20,6 +20,9 @@ import i18n from "./component/i18n";
 import {myLang} from './store/language/action';
 import About from "./pages/About";
 
+import Price from "./pages/Price";
+
+
 const todosQuery = {
     path: "articles",
     queryParams: ["limitToLast=10"]
@@ -52,6 +55,10 @@ function App() {
 
                     <Route path="/Contact">
                         <Contact/>
+                    </Route>
+
+                    <Route path="/Price">
+                        <Price/>
                     </Route>
 
                     <Route path="/ConverLink/:id">

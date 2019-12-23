@@ -31,7 +31,8 @@ i18n
                     contact_error_phone_maxlenght: "Максимальное количество символов 13",
                     services_title: "Наши услуги",
                     services_detailed:"Подробнее",
-                    about_title:"О нас"
+                    about_title:"О нас",
+                    menu_price:"Прайс"
 
                 }
             },
@@ -60,7 +61,8 @@ i18n
                     contact_error_phone_maxlenght: "The maximum number of characters is 13",
                     services_title: "Our Services",
                     services_detailed:"Read more",
-                    about_title:"About us"
+                    about_title:"About us",
+                    menu_price: "Price__short"
                 }
             }
         },
