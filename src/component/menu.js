@@ -167,12 +167,26 @@ function MenuPrepare (){
                                                 <Trans i18nKey="menu_serv">Услуги</Trans>
                                             </NavLink>
                                         </li>
+
                                         <li className="menu-item">
                                             <NavLink
                                                 onClick={()=>{
                                                     setExpanded(false);
                                                 }}
                                                 eventKey="3"
+                                                className="nav-link"
+                                                activeClassName="active"
+                                                to="/About" >
+                                                <Trans i18nKey="menu_about">О нас </Trans>
+                                            </NavLink>
+                                        </li>
+
+                                        <li className="menu-item">
+                                            <NavLink
+                                                onClick={()=>{
+                                                    setExpanded(false);
+                                                }}
+                                                eventKey="4"
                                                 className="nav-link"
                                                 activeClassName="active"
                                                 to="/Contact" >

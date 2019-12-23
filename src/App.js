@@ -18,6 +18,7 @@ import ConverLink from './component/ConverLink';
 import i18n from "./component/i18n";
 
 import {myLang} from './store/language/action';
+import About from "./pages/About";
 
 const todosQuery = {
     path: "articles",
@@ -36,18 +37,27 @@ function App() {
           <Fragment>
               <Header />
                 <Switch>
+
                   <Route exact path='/'>
                       <Main />
                   </Route>
+
                     <Route path="/Services">
                       <Services/>
                     </Route>
+
+                    <Route path="/About">
+                        <About/>
+                    </Route>
+
                     <Route path="/Contact">
                         <Contact/>
                     </Route>
+
                     <Route path="/ConverLink/:id">
                         <ConverLink/>
                     </Route>
+
                  </Switch>
               <Footer />
           </Fragment>

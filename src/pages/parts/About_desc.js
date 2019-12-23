@@ -1,0 +1,32 @@
+import React,{Fragment,Component} from 'react';
+import { withTranslation, Trans  } from 'react-i18next';
+
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+
+import '../../style/About.css';
+
+
+class About__desc extends  Component{
+    render(){
+        return(
+            <Fragment>
+                <div className="section-about__desc section">
+                    <Container >
+                        <Row>
+                            <Col lg='12'>
+                                <h2 className="about__desc__title">WHo am i ?</h2>
+                                <p className="about__desc__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi mollitia quidem recusandae. Aut ea esse illo iusto libero, nulla, obcaecati optio, pariatur perspiciatis provident reiciendis rem repudiandae soluta tenetur velit!</p>
+                            </Col>
+                        </Row>
+                    </Container>
+                </div>
+
+            </Fragment>
+        )
+    }
+}
+
+
+export default About__desc;
