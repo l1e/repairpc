@@ -62,7 +62,7 @@ i18n
                     services_title: "Our Services",
                     services_detailed:"Read more",
                     about_title:"About us",
-                    menu_price: "Price__short"
+                    menu_price: "Price"
                 }
             }
         },
