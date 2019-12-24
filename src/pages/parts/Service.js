@@ -21,6 +21,7 @@ function ServicePrepare(props){
     };
 
     let myActiveLanguage = props.lang;
+    // console.log(myActiveLanguage);
         return(
             <Fragment>{
                     props.articles.map((item, index) => {

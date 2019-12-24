@@ -6,23 +6,26 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
-import {db} from '../config/firebaseConfig';
 import i18n from "../component/i18n";
-let articlesDb = db.ref('/articles');
 
-class ServiceSingle extends  Component{
+import {isEmpty, isLoaded} from "react-redux-firebase/";
+import {useSelector} from "react-redux";
 
-    constructor(props){
-        super(props);
-        this.state={article: ''}
-    };
+function ServiceSingle (props){
+    let idArticle = props.id;
+    let newData ;
+    let currentArticle = [];
+    const articlesData = useSelector(state => state.base.data.articles);
+    const language= useSelector(state=> state.myLang);
 
-    setCurrentArticle =(props) =>{
+    const setCurrentArticle =(props) =>{
+        // console.log(props);
         let dataArticle=[];
-        let сurrLanguage = i18n.language;
+        let сurrLanguage = language;
+        // console.log(сurrLanguage);
         for (let i = 0; i < props.length ; i++){
             // console.log(props[i]);
-            if (props[i].id === this.props.id){
+            if (props[i].id === idArticle){
                 if (сurrLanguage === "ru"){
                     // console.log(props[i].ru);
                     dataArticle['title'] = props[i]['ru']['title'];
@@ -37,32 +40,43 @@ class ServiceSingle extends  Component{
                 // console.log("error");
             }
         }
-        this.setState({article:dataArticle});
+        currentArticle = dataArticle;
+        // console.log(currentArticle);
     };
 
-    componentDidMount () {
-        articlesDb.on('value', snapshot => {
-            let data = snapshot.val();
-            let article = Object.values(data);
-            this.setCurrentArticle(article);
-        });
+
+    if (!isLoaded(articlesData)) {
+        // console.log(articlesData);
+        return "Loading";
     }
-    render(){
-        return(
+    // Show a message if there are no todos
+    if (isEmpty(articlesData)) {
+        // console.log(articlesData);
+        return "Todo list is empty";
+    }
+    if (isLoaded(articlesData)) {
+        // console.log(Object.values(articlesData));
+        newData = Object.values(articlesData);
+        // console.log(articlesData['-LmtiQQmQ4bJ1SS5esff']['en']['descr']);
+        setCurrentArticle(newData);
+        // console.log(newData);
+    }
+    // console.log(currentArticle);
+
+    return(
             <Fragment>
                 <Container >
                     <Row >
                         <Col lg='12'>
                             <div className="service-single">
-                                <p className='service-single__title'>{this.state.article.title}</p>
-                                <p className='service-single__desc'> {this.state.article.description} </p>
+                                <p className='service-single__title'>{currentArticle.title}</p>
+                                <p className='service-single__desc'> {currentArticle.description} </p>
                             </div>
                         </Col>
                     </Row>
                 </Container>
             </Fragment>
         )
-    }
 }
 
 // console.log({this.props.params});
