@@ -11,6 +11,15 @@ import imgRepairPc from '../../images/services_repairpc.webp';
 import { Trans, withTranslation  } from 'react-i18next';
 
 function ServicePrepare(props){
+    const cutStringToValue =(string) =>{
+        if (string.length > 200){
+            let newString= string.slice(0, 200);
+            return newString + '...';
+        } else{
+            return string;
+        }
+    };
+
     let myActiveLanguage = props.lang;
         return(
             <Fragment>{
@@ -29,9 +38,9 @@ function ServicePrepare(props){
                                         </h3>
                                     <p className="box__description">
                                         {myActiveLanguage === "ru" ? (
-                                            item.ru.descr
+                                            cutStringToValue(item.ru.descr)
                                         ) : (
-                                            item.en.descr
+                                            cutStringToValue(item.en.descr)
                                         )}
                                     </p>
                                     <Link to={"ConverLink/"+item.id} id={item.id}>
