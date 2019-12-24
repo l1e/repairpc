@@ -9,7 +9,7 @@ import  {useSelector, useDispatch} from 'react-redux';
 
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
-import goalImg from '../images/logo.png';
+import goalImg from '../images/logo_white.png';
 
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
