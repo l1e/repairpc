@@ -17,17 +17,17 @@ class About__mainPrepare extends  Component{
                 <div className="section-bout section">
                     <Container >
                         <Row>
-                            <Col lg='12'>
+                            <Col md='12' lg='12'>
                                 <h2 className='section-about__title section-title'>
                                     <Trans i18nKey="about_title">О нас</Trans>
                                 </h2>
                             </Col>
-                            <Col lg='6'>
-                                <Row>
-                                    <Col lg='5'>
+                            <Col md='12' lg='6' >
+                                <Row className="about_biography-inner">
+                                    <Col md='5' lg='5'>
                                         <img src={aboutFace} className="about__face" />
                                     </Col>
-                                    <Col lg='7'>
+                                    <Col md='7' lg='7' >
                                         <p className="about_biography">
                                             <Trans i18nKey="about_presonal_name">Nissim Ezra</Trans>
                                         </p>
@@ -49,12 +49,12 @@ class About__mainPrepare extends  Component{
                                     </Col>
                                 </Row>
                             </Col>
-                            <Col lg='6'>
+                            <Col md='12' lg='6'>
                                 <Row>
-                                    <Col lg='6'>
+                                    <Col md='6' lg='6'>
                                         <img src={aboutCertificate} className="about__certificate" />
                                     </Col>
-                                    <Col lg='6'>
+                                    <Col md='6' lg='6'>
                                         <img src={aboutCertificate} className="about__certificate" />
                                     </Col>
                                 </Row>
