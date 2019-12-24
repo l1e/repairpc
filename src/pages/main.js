@@ -19,8 +19,9 @@ function MainPrepare() {
                     <Container>
                         <Row className='boxes'>
                             <Col lg='12'>
-                                <h2 className='section-services__title section-title'><Trans i18nKey="services_title">Наши
-                                    услуги</Trans></h2>
+                                <h2 className='section-services__title section-title'>
+                                    <Trans i18nKey="services_title">Наши услуги</Trans>
+                                </h2>
                             </Col>
                             <ContainerService />
                         </Row>

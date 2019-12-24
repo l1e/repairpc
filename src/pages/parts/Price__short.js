@@ -4,9 +4,11 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
+import { withTranslation, Trans  } from 'react-i18next';
+
 import '../../style/Price__short.css';
 
-class Price__short extends  Component{
+class Price__shortPrepare extends  Component{
     render(){
         return(
             <Fragment>
@@ -14,13 +16,20 @@ class Price__short extends  Component{
                     <Container >
                         <Row>
                             <Col lg='12'>
+                                <h2 className='section-price__title section-title'>
+                                    <Trans i18nKey="price_title">Прайс</Trans>
+                                </h2>
                                  <div className="price">
                                      <div className="price-label">
                                          <div className="price-label__name">
-                                             <p className="price-label__text">Services</p>
+                                             <p className="price-label__text">
+                                                 <Trans i18nKey="price_label_name">Services</Trans>
+                                             </p>
                                          </div>
                                          <div className="price-label__price">
-                                             <p className="price-label__text">Cost</p>
+                                             <p className="price-label__text">
+                                                 <Trans i18nKey="price_label_cost">Cost</Trans>
+                                             </p>
                                          </div>
                                      </div>
                                      <div className="price__data">
@@ -85,5 +94,6 @@ class Price__short extends  Component{
     }
 }
 
+const Price__short = withTranslation()(Price__shortPrepare);
 
 export default Price__short;

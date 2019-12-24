@@ -32,7 +32,10 @@ i18n
                     services_title: "Наши услуги",
                     services_detailed:"Подробнее",
                     about_title:"О нас",
-                    menu_price:"Прайс"
+                    menu_price:"Прайс",
+                    price_title: "Прайс",
+                    price_label_name:" Услуга",
+                    price_label_cost:"Стоимость"
 
                 }
             },
@@ -62,7 +65,10 @@ i18n
                     services_title: "Our Services",
                     services_detailed:"Read more",
                     about_title:"About us",
-                    menu_price: "Price"
+                    menu_price: "Price",
+                    price_title: "Price",
+                    price_label_name:" Service",
+                    price_label_cost:"Cost"
                 }
             }
         },
