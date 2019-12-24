@@ -35,7 +35,15 @@ i18n
                     menu_price:"Прайс",
                     price_title: "Прайс",
                     price_label_name:" Услуга",
-                    price_label_cost:"Стоимость"
+                    price_label_cost:"Стоимость",
+                    about_presonal_name:"Ниссим Эзра",
+                    about_presonal_specialize:"Электронный и IT техник",
+                    about_presonal_phone:"Телефон 514-967-5255",
+                    about_presonal_address:"Адрес: 5501 Av Adalbert.",
+                    about_presonal_office:"Отделение: 1518",
+                    about_presonal_street:"Cote Saint Luc H4W 2B1",
+                    about_presonal_question:"Кто я ?",
+                    about_presonal_description:"Lorem Ipsum боль сидеть Амет, consectetur adipiscing Элит. Методы по своей ароматной, на самом деле, было принято. Или это регулярное бесплатно, не ослепленный выбора отклонения результирующей встречи положение, возможно, пожелает отказаться от независимой!"
 
                 }
             },
@@ -68,7 +76,15 @@ i18n
                     menu_price: "Price",
                     price_title: "Price",
                     price_label_name:" Service",
-                    price_label_cost:"Cost"
+                    price_label_cost:"Cost",
+                    about_presonal_name:"Nissim Ezra",
+                    about_presonal_specialize:"Electronic & IT Technician",
+                    about_presonal_phone:"Phone 514-967-5255",
+                    about_presonal_address:"Adress: 5501 Av Adalbert",
+                    about_presonal_office:"Office: 1518",
+                    about_presonal_street:"Cote Saint Luc H4W 2B1",
+                    about_presonal_question:"Who am i ?",
+                    about_presonal_description:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi mollitia quidem recusandae. Aut ea esse illo iusto libero, nulla, obcaecati optio, pariatur perspiciatis provident reiciendis rem repudiandae soluta tenetur velit!"
                 }
             }
         },

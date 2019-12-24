@@ -10,7 +10,7 @@ import '../../style/About.css';
 import aboutFace from '../../images/face.jpg';
 import aboutCertificate from '../../images/certificate.jpg';
 
-class About__main extends  Component{
+class About__mainPrepare extends  Component{
     render(){
         return(
             <Fragment>
@@ -28,12 +28,24 @@ class About__main extends  Component{
                                         <img src={aboutFace} className="about__face" />
                                     </Col>
                                     <Col lg='7'>
-                                        <p className="about_biography">Nissim Ezra</p>
-                                        <p className="about_biography">Electronic & IT Technician</p>
-                                        <p className="about_biography">Phone 514-967-5255</p>
-                                        <p className="about_biography">Adress: 5501 Av Adalbert</p>
-                                        <p className="about_biography">Office: 1518</p>
-                                        <p className="about_biography">Cote Saint Luc H4W 2B1</p>
+                                        <p className="about_biography">
+                                            <Trans i18nKey="about_presonal_name">Nissim Ezra</Trans>
+                                        </p>
+                                        <p className="about_biography">
+                                             <Trans i18nKey="about_presonal_specialize">Electronic & IT Technician</Trans>
+                                        </p>
+                                        <p className="about_biography">
+                                             <Trans i18nKey="about_presonal_phone">Phone 514-967-5255</Trans>
+                                        </p>
+                                        <p className="about_biography">
+                                             <Trans i18nKey="about_presonal_address">Adress: 5501 Av Adalbert</Trans>
+                                        </p>
+                                        <p className="about_biography">
+                                             <Trans i18nKey="about_presonal_office">Office: 1518</Trans>
+                                        </p>
+                                        <p className="about_biography">
+                                            <Trans i18nKey="about_presonal_street"> Cote Saint Luc H4W 2B1</Trans>
+                                        </p>
                                     </Col>
                                 </Row>
                             </Col>
@@ -55,6 +67,6 @@ class About__main extends  Component{
         )
     }
 }
-
+const About__main = withTranslation()(About__mainPrepare);
 
 export default About__main;

@@ -8,7 +8,7 @@ import Col from 'react-bootstrap/Col';
 import '../../style/About.css';
 
 
-class About__desc extends  Component{
+class About__descPrepare extends  Component{
     render(){
         return(
             <Fragment>
@@ -16,8 +16,14 @@ class About__desc extends  Component{
                     <Container >
                         <Row>
                             <Col lg='12'>
-                                <h2 className="about__desc__title">WHo am i ?</h2>
-                                <p className="about__desc__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi mollitia quidem recusandae. Aut ea esse illo iusto libero, nulla, obcaecati optio, pariatur perspiciatis provident reiciendis rem repudiandae soluta tenetur velit!</p>
+                                <h2 className="about__desc__title">
+                                    <Trans i18nKey="about_presonal_question">WHo am i ? </Trans>
+                                    </h2>
+                                <p className="about__desc__desc">
+                                    <Trans i18nKey="about_presonal_description">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi mollitia quidem recusandae. Aut ea esse illo iusto libero, nulla, obcaecati optio, pariatur perspiciatis provident reiciendis rem repudiandae soluta tenetur velit!
+                                    </Trans>
+                                </p>
                             </Col>
                         </Row>
                     </Container>
@@ -28,5 +34,5 @@ class About__desc extends  Component{
     }
 }
 
-
+const About__desc = withTranslation()(About__descPrepare);
 export default About__desc;
