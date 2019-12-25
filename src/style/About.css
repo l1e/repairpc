@@ -13,3 +13,13 @@
 .about_biography-inner{
     margin: 20px 0px;
 }
+.about_biography-inner__bio{
+
+}
+
+@media (max-width: 767.98px) {
+    .about_biography-inner__bio{
+        margin-top: 20px
+    }
+
+}

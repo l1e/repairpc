@@ -24,10 +24,10 @@ class About__mainPrepare extends  Component{
                             </Col>
                             <Col md='12' lg='6' >
                                 <Row className="about_biography-inner">
-                                    <Col md='5' lg='5'>
+                                    <Col className="about_biography-inner__image" md='5' lg='5'>
                                         <img src={aboutFace} className="about__face" />
                                     </Col>
-                                    <Col md='7' lg='7' >
+                                    <Col md='7' lg='7' className="about_biography-inner__bio" >
                                         <p className="about_biography">
                                             <Trans i18nKey="about_presonal_name">Nissim Ezra</Trans>
                                         </p>

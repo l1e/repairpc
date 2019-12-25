@@ -1,3 +1,10 @@
 .fixwidth{
     min-height: 1px;
 }
+
+@media (max-width: 767.98px) {
+    .contact__title{
+        margin-top: 20px
+    }
+
+}
