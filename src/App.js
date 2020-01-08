@@ -1,7 +1,7 @@
 import React, {Fragment} from 'react';
 import {BrowserRouter  as Router ,Route, Switch} from "react-router-dom";
-import './style/App.css';
-import './style/BootstrapSettings.sass';
+
+import './style/App.sass';
 
 import './component/i18n';
 import {useFirebaseConnect} from "react-redux-firebase";

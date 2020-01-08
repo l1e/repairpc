@@ -7,8 +7,6 @@ import Col from 'react-bootstrap/Col';
 
 import { withTranslation, Trans  } from 'react-i18next';
 
-import '../../style/Map.css'
-
 const AnyReactComponent = ({ text }) => <div>{text}</div>;
 
 class MapPrepare extends Component {

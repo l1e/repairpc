@@ -9,10 +9,6 @@ import Button from 'react-bootstrap/Button';
 import imgContact from '../../images/contact3.webp';
 import Form from 'react-bootstrap/Form';
 
-
-
-import '../../style/ContactForm.css';
-
 function ContactFormPrepare (props){
     const { register, handleSubmit, errors } = useForm({
         // by setting validateCriteriaMode to 'all',

@@ -6,8 +6,6 @@ import Col from 'react-bootstrap/Col';
 
 import { withTranslation, Trans  } from 'react-i18next';
 
-import '../../style/Price__short.css';
-
 class Price__shortPrepare extends  Component{
     render(){
         return(

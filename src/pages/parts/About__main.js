@@ -5,8 +5,6 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
-import '../../style/About.css';
-
 import aboutFace from '../../images/face.jpg';
 import aboutCertificate from '../../images/certificate.jpg';
 

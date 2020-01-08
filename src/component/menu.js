@@ -3,8 +3,6 @@ import {NavLink} from 'react-router-dom';
 import { withTranslation, Trans  } from 'react-i18next';
 import i18n from './i18n';
 
-import '../style/Menu.css';
-
 import  {useSelector, useDispatch} from 'react-redux';
 
 import Navbar from "react-bootstrap/Navbar";

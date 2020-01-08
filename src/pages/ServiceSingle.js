@@ -1,5 +1,4 @@
 import React,{Fragment,Component} from 'react';
-import '../style/ServiceSingle.css';
 
 
 import Container from 'react-bootstrap/Container';

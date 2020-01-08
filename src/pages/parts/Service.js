@@ -1,7 +1,6 @@
 import React,{Fragment,Component} from 'react';
 import i18n from "../../component/i18n";
 
-import '../../style/Service.css';
 
 import {Link} from "react-router-dom";
 import Button from 'react-bootstrap/Button';
