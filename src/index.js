@@ -10,7 +10,6 @@ import { ReactReduxFirebaseProvider } from "react-redux-firebase";
 import firebaseConfig from './config/firebase';
 
 import allReducers from './store/reducer';
-import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
