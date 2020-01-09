@@ -8,6 +8,7 @@ import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import imgContact from '../../images/contact3.webp';
 import Form from 'react-bootstrap/Form';
+import Title from './Title';
 
 function ContactFormPrepare (props){
     const { register, handleSubmit, errors } = useForm({
@@ -22,11 +23,10 @@ function ContactFormPrepare (props){
         return(
             <Fragment>
                 <div className="section-contact section">
+
+                    <Title isheader={props.isheader} titlei18nkey={props.titlei18nkey} titlei18text={props.titlei18text}/>
                     <Container >
                         <Row >
-                            <Col lg='12'>
-                                <h2 className='section-contact__title section-title'><Trans i18nKey="contact_title">Contact us</Trans></h2>
-                            </Col>
                             <Col lg='6'>
                                 <div className="contact-left">
                                     <img className='contact-left__img' src={imgContact} alt=""/>

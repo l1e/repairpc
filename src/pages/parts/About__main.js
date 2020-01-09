@@ -7,19 +7,17 @@ import Col from 'react-bootstrap/Col';
 
 import aboutFace from '../../images/face.jpg';
 import aboutCertificate from '../../images/certificate.jpg';
-
+import Title from './Title';
 class About__mainPrepare extends  Component{
     render(){
         return(
             <Fragment>
                 <div className="section-bout section">
+                    <Title isheader={this.props.isheader} titlei18nkey={this.props.titlei18nkey} titlei18text={this.props.titlei18text}/>
+
                     <Container >
                         <Row>
-                            <Col md='12' lg='12'>
-                                <h2 className='section-about__title section-title'>
-                                    <Trans i18nKey="about_title">О нас</Trans>
-                                </h2>
-                            </Col>
+
                             <Col md='12' lg='6' >
                                 <Row className="about_biography-inner">
                                     <Col className="about_biography-inner__image" md='5' lg='5'>

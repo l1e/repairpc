@@ -24,7 +24,7 @@ function ContainerService (){
     // console.log(language);
     // console.log(newData);
     return(
-        <Service lang={language} articles={newData} />
+        <Service lang={language} articles={newData}  />
     )
 }
 

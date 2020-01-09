@@ -5,18 +5,17 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
 import { withTranslation, Trans  } from 'react-i18next';
+import Title from './Title';
 
 class Price__shortPrepare extends  Component{
     render(){
         return(
             <Fragment>
                 <div className="section-price section">
+                    <Title isheader={this.props.isheader} titlei18nkey={this.props.titlei18nkey} titlei18text={this.props.titlei18text}/>
                     <Container >
                         <Row>
                             <Col lg='12'>
-                                <h2 className='section-price__title section-title'>
-                                    <Trans i18nKey="price_title">Прайс</Trans>
-                                </h2>
                                  <div className="price">
                                      <div className="price-label">
                                          <div className="price-label__name">

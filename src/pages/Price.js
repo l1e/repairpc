@@ -12,7 +12,7 @@ class Price extends  Component{
     render(){
         return(
             <Fragment>
-                <Price__short/>
+                <Price__short isheader='true' titlei18nkey='price_title' titlei18text='Price'/>
             </Fragment>
         )
     }

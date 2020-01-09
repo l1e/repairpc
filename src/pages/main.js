@@ -22,12 +22,12 @@ function MainPrepare() {
                                     <Trans i18nKey="services_title">Наши услуги</Trans>
                                 </h2>
                             </Col>
-                            <ContainerService />
+                            <ContainerService  />
                         </Row>
                     </Container>
                 </div>
-                <About__main/>
-                <ContactForm/>
+                <About__main isheader='false' titlei18nkey='about_title' titlei18text='About Us'/>
+                <ContactForm isheader='false' titlei18nkey='contact_title' titlei18text='Contact us'/>
             </Fragment>
         )
 }

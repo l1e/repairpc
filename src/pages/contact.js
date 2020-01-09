@@ -7,7 +7,7 @@ class Contact extends  Component{
     render(){
         return(
             <Fragment>
-                <ContactForm/>
+                <ContactForm isheader='true' titlei18nkey='contact_title' titlei18text='Contact us'/>
                 <Map/>
             </Fragment>
         )

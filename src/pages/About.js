@@ -15,7 +15,7 @@ class About extends  Component{
     render(){
         return(
             <Fragment>
-                <About__main />
+                <About__main isheader='true' titlei18nkey='about_title' titlei18text='About Us' />
                 <About__desc/>
             </Fragment>
         )

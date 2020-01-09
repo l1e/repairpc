@@ -5,6 +5,8 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
+import Title from './parts/Title';
+
 import ContainerService from "./parts/ContainerService";
 
 
@@ -12,14 +14,10 @@ function ServicesPrepare (){
         return(
             <Fragment>
                 <div className="section-services section">
+                    <Title isheader='true' titlei18nkey='services_title' titlei18text='Services'/>
                     <Container >
                         <Row className='boxes'>
-                            <Col lg='12'>
-                                <h2 className='section-services__title section-title'>
-                                    <Trans i18nKey="services_title">Наши услуги</Trans>
-                                </h2>
-                            </Col>
-                                <ContainerService/>
+                                <ContainerService />
                         </Row>
                     </Container>
                 </div>
