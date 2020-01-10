@@ -116,7 +116,7 @@ function MenuPrepare (){
                     <Row>
                         <Col>
                             <Navbar
-                                    expanded={expanded}  inverse='true' collapseOnSelect={true} expand="lg" >
+                                    expanded={expanded}  inverse='true' collapseOnSelect={true} expand="md" variant="dark">
                                 <Navbar.Brand onClick={() =>{
                                     if (mobileWidth < 993){
                                         setExpanded( false)}

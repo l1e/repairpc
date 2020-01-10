@@ -10,6 +10,8 @@ import i18n from "../component/i18n";
 import {isEmpty, isLoaded} from "react-redux-firebase/";
 import {useSelector} from "react-redux";
 
+import Title from './parts/Title';
+
 function ServiceSingle (props){
     let idArticle = props.id;
     let newData ;
@@ -64,11 +66,13 @@ function ServiceSingle (props){
 
     return(
             <Fragment>
+                <Title isheader='true'  titlei18text={currentArticle.title} headerthree='true'/>
+
                 <Container >
                     <Row >
                         <Col lg='12'>
                             <div className="service-single">
-                                <p className='service-single__title'>{currentArticle.title}</p>
+                                {/*{<p className='service-single__title'>{currentArticle.title}</p>}*/}
                                 <p className='service-single__desc'> {currentArticle.description} </p>
                             </div>
                         </Col>

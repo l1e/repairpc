@@ -22,7 +22,7 @@ function ContactFormPrepare (props){
         const { t } = props;
         return(
             <Fragment>
-                <div className="section-contact section">
+                <div className={"section-contact section"+ (props.isheader==='true' ? ' page' : ' part')}>
 
                     <Title isheader={props.isheader} titlei18nkey={props.titlei18nkey} titlei18text={props.titlei18text}/>
                     <Container >

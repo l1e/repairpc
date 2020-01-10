@@ -12,7 +12,7 @@ class About__mainPrepare extends  Component{
     render(){
         return(
             <Fragment>
-                <div className="section-bout section">
+                <div className={"section-bout section "+(this.props.isheader==='true' ? ' page' : ' part')}>
                     <Title isheader={this.props.isheader} titlei18nkey={this.props.titlei18nkey} titlei18text={this.props.titlei18text}/>
 
                     <Container >
