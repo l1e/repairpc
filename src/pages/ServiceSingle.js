@@ -4,6 +4,7 @@ import React,{Fragment,Component} from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import Button from 'react-bootstrap/Button';
 
 import i18n from "../component/i18n";
 
@@ -12,15 +13,20 @@ import {useSelector} from "react-redux";
 
 import Title from './parts/Title';
 
+import { withRouter } from 'react-router-dom';
+
+import {Link} from 'react-router-dom';
+
 function ServiceSingle (props){
     let idArticle = props.id;
+    let backpath = props.backppath;
     let newData ;
     let currentArticle = [];
     const articlesData = useSelector(state => state.base.data.articles);
     const language= useSelector(state=> state.myLang);
 
     const setCurrentArticle =(props) =>{
-        // console.log(props);
+        console.log(backpath);
         let dataArticle=[];
         let сurrLanguage = language;
         // console.log(сurrLanguage);
@@ -74,6 +80,9 @@ function ServiceSingle (props){
                             <div className="service-single">
                                 {/*{<p className='service-single__title'>{currentArticle.title}</p>}*/}
                                 <p className='service-single__desc'> {currentArticle.description} </p>
+                                <Link to={backpath} >
+                                    <Button variant="primary" className="service-single__back" onClick={()=>{}}> Back </Button>
+                                </Link>
                             </div>
                         </Col>
                     </Row>

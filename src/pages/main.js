@@ -22,7 +22,7 @@ function MainPrepare() {
                                     <Trans i18nKey="services_title">Наши услуги</Trans>
                                 </h2>
                             </Col>
-                            <ContainerService  />
+                            <ContainerService backpath='m'  />
                         </Row>
                     </Container>
                 </div>

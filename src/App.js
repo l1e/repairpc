@@ -61,7 +61,7 @@ function App() {
                         <Price/>
                     </Route>
 
-                    <Route path="/ConverLink/:id">
+                    <Route path="/ConverLink/:params">
                         <ConverLink/>
                     </Route>
 

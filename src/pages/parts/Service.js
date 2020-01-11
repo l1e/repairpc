@@ -20,6 +20,7 @@ function ServicePrepare(props){
     };
 
     let myActiveLanguage = props.lang;
+    let backpath= props.backpath;
     // console.log(myActiveLanguage);
         return(
             <Fragment>{
@@ -43,7 +44,7 @@ function ServicePrepare(props){
                                             cutStringToValue(item.en.descr)
                                         )}
                                     </p>
-                                    <Link to={"ConverLink/"+item.id} id={item.id}>
+                                    <Link to={"ConverLink/"+item.id+backpath} id={item.id} >
                                         <Button className='box__button' variant="primary"> <Trans i18nKey="services_detailed">Наши услуги</Trans></Button>
                                     </Link>
                                 </div>
