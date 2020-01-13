@@ -21,12 +21,12 @@ class MapPrepare extends Component {
     render() {
         return (
             <Container className='map'>
-                <Row >
+                <Row>
                     <Col lg='12'>
-                        <h2 className='section-title'>
+                        <h2 className='map__title section-title'>
                             <Trans i18nKey="map_title">Мы на карте</Trans>
                         </h2>
-                        <div style={{ height: '60vh', width: '100%' }}>
+                        <div className='map__map'>
                         <GoogleMapReact
                             bootstrapURLKeys={{ key:'AIzaSyAhEinEuiO3IXu7YxlgShb1fv9I47WA3Y8' }}
                             defaultCenter={this.props.center}
