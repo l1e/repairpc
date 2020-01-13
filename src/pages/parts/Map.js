@@ -20,28 +20,30 @@ class MapPrepare extends Component {
 
     render() {
         return (
-            <Container className='map'>
-                <Row>
-                    <Col lg='12'>
-                        <h2 className='map__title section-title'>
-                            <Trans i18nKey="map_title">Мы на карте</Trans>
-                        </h2>
-                        <div className='map__map'>
-                        <GoogleMapReact
-                            bootstrapURLKeys={{ key:'AIzaSyAhEinEuiO3IXu7YxlgShb1fv9I47WA3Y8' }}
-                            defaultCenter={this.props.center}
-                            defaultZoom={this.props.zoom}
-                        >
-                            <AnyReactComponent
-                                lat={48.450902}
-                                lng={35.018797}
-                                text="We are here"
-                            />
-                        </GoogleMapReact>
-                    </div>
-                    </Col>
-                </Row>
-            </Container>
+            <div className='map'>
+                <Container >
+                    <Row>
+                        <Col lg='12'>
+                            <h2 className='map__title section-title'>
+                                <Trans i18nKey="map_title">Мы на карте</Trans>
+                            </h2>
+                            <div className='map__map'>
+                            <GoogleMapReact
+                                bootstrapURLKeys={{ key:'AIzaSyAhEinEuiO3IXu7YxlgShb1fv9I47WA3Y8' }}
+                                defaultCenter={this.props.center}
+                                defaultZoom={this.props.zoom}
+                            >
+                                <AnyReactComponent
+                                    lat={48.450902}
+                                    lng={35.018797}
+                                    text="We are here"
+                                />
+                            </GoogleMapReact>
+                        </div>
+                        </Col>
+                    </Row>
+                </Container>
+            </div>
         );
     }
 }
