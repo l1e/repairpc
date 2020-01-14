@@ -132,7 +132,7 @@ function MenuPrepare (){
                                                 onClick={()=>{
                                                         setExpanded(false);
                                                 }}
-                                                eventKey="1"
+                                                eventkey="1"
                                                 className="nav-link"
                                                 activeClassName={"active"}
                                                 exact={true}
@@ -145,7 +145,7 @@ function MenuPrepare (){
                                                 onClick={()=>{
                                                     setExpanded(false);
                                                 }}
-                                                eventKey="2"
+                                                eventkey="2"
                                                 className="nav-link"
                                                 activeClassName="active"
                                                 to="/Services" >
@@ -158,7 +158,7 @@ function MenuPrepare (){
                                                 onClick={()=>{
                                                     setExpanded(false);
                                                 }}
-                                                eventKey="3"
+                                                eventkey="3"
                                                 className="nav-link"
                                                 activeClassName="active"
                                                 to="/About" >
@@ -170,7 +170,7 @@ function MenuPrepare (){
                                                 onClick={()=>{
                                                     setExpanded(false);
                                                 }}
-                                                eventKey="3"
+                                                eventkey="3"
                                                 className="nav-link"
                                                 activeClassName="active"
                                                 to="/Price" >
@@ -183,7 +183,7 @@ function MenuPrepare (){
                                                 onClick={()=>{
                                                     setExpanded(false);
                                                 }}
-                                                eventKey="4"
+                                                eventkey="4"
                                                 className="nav-link"
                                                 activeClassName="active"
                                                 to="/Contact" >

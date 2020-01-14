@@ -1,9 +1,8 @@
 import React,{Fragment} from 'react';
-import { withTranslation, Trans  } from 'react-i18next';
+import { withTranslation } from 'react-i18next';
 
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 
 import Title from './parts/Title';
 

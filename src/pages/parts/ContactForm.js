@@ -1,4 +1,4 @@
-import React,{Fragment,Component} from 'react';
+import React,{Fragment} from 'react';
 import { withTranslation, Trans  } from 'react-i18next';
 import useForm from 'react-hook-form';
 
