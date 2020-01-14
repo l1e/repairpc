@@ -9,7 +9,7 @@ import Col from 'react-bootstrap/Col';
 import ContainerService from "./parts/ContainerService";
 import ContactForm from "./parts/ContactForm";
 import Welcome from "./parts/Welcome";
-import About__main from "./parts/About__main";
+import AboutMain from "./parts/AboutMain";
 function MainPrepare() {
         return (
             <Fragment>
@@ -26,7 +26,7 @@ function MainPrepare() {
                         </Row>
                     </Container>
                 </div>
-                <About__main isheader='false' titlei18nkey='about_title' titlei18text='About Us'/>
+                <AboutMain isheader='false' titlei18nkey='about_title' titlei18text='About Us'/>
                 <ContactForm isheader='false' titlei18nkey='contact_title' titlei18text='Contact us'/>
             </Fragment>
         )
