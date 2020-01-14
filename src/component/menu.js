@@ -41,13 +41,13 @@ function MenuPrepare (){
 
     //waiting for get language from store
     if (!isLoaded(myStoreLang)) {
-        return <Trans i18nKey="menu_loading">Loading</Trans>;
+        return <Trans i18nKey="language_status_loading">Loading</Trans>;
     }
 
     // check about existing data in language variable
     if (isEmpty(myStoreLang)) {
         console.log(myStoreLang);
-        return <Trans i18nKey="menu_language_status">Language variable is empty or not set</Trans>;
+        return <Trans i18nKey="language_status_empty">Language variable is empty or not set</Trans>;
     }
 
     //set current language and change button class
