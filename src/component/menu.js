@@ -14,102 +14,89 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 
-import createHistory from 'history/createBrowserHistory'
 import {isEmpty, isLoaded} from "react-redux-firebase";
 import {myLang} from "../store/language/action";
-const history = createHistory();
-
 
 function MenuPrepare (){
+
     //Here we have two const for collapse menu.
     const [expanded, setExpanded] = useState(false);
+
+    //In this valible i set active language
     let myActiveLanguage ;
-    let buttonRu = 'pasive';
-    let buttonEn = 'active';
-    let mobileWidth= window.innerWidth;
-    let mobileMenu = false;
+
+    //Set default class for language button
+    let statusLanguageRu = 'pasive';
+    let statusLanguageEn = 'active';
+
+    //optimize mobile menu
+    let displayWidth= window.innerWidth;
+    // let mobileMenu = false;
+
+    //create dispatch
     const dispatch = useDispatch();
+
+    //get language from store
     const myStoreLang = useSelector(state => state.myLang);
+
+    //waiting for get language from store
     if (!isLoaded(myStoreLang)) {
-        console.log(myStoreLang);
-        return "Loading";
+        return <Trans i18nKey="menu_loading">Loading</Trans>;
     }
-    // Show a message if there are no todos
+
+    // check about existing data in language variable
     if (isEmpty(myStoreLang)) {
         console.log(myStoreLang);
-        return "Todo list is empty";
+        return <Trans i18nKey="menu_language_status">Language variable is empty or not set</Trans>;
     }
 
+    //set current language and change button class
     if (isLoaded(myStoreLang)) {
-        // console.log(Object.values(articlesData));
         myActiveLanguage = myStoreLang;
         if (myActiveLanguage==='ru'){
-            buttonRu= 'active';
-            buttonEn= 'pasive';
+            statusLanguageRu= 'active';
+            statusLanguageEn= 'pasive';
         }else{
-            buttonRu= 'pasive';
-            buttonEn= 'active';
+            statusLanguageRu= 'pasive';
+            statusLanguageEn= 'active';
         }
-        // console.log(articlesData['-LmtiQQmQ4bJ1SS5esff']['en']['descr']);
     }
-    console.log(myActiveLanguage);
-    // console.log(window.innerWidth);
 
-    if (mobileWidth < 993){
-        mobileMenu = true;
-    }else{
-        mobileMenu = false;
-    }
+    //set mobile
+    // if (displayWidth < 993){
+    //     mobileMenu = true;
+    // }else{
+    //     mobileMenu = false;
+    // }
+
     window.addEventListener("resize", ()=>{
         console.log(myActiveLanguage);
-        mobileWidth = window.innerWidth;
+        displayWidth = window.innerWidth;
 
-        if (mobileWidth < 993){
-            mobileMenu = true;
-        }else{
-            mobileMenu = false;
-        }
-        console.log(mobileMenu);
+        // if (displayWidth < 993){
+        //     mobileMenu = true;
+        // }else{
+        //     mobileMenu = false;
+        // }
+        // console.log(mobileMenu);
     });
 
-    // constructor(props) {
-    //     super(props);
-    //     this.state = {
-    //         buttonRu: 'pasive',
-    //         buttonEn: 'active'
-    //     };
-    // }
-    //
-    // componentDidMount(){
-    //     let getCurrLanguage = i18n.language;
-    //
-    //     if (getCurrLanguage ==='ru'){
-    //         this.setState(
-    //             {
-    //              buttonRu: 'active',
-    //              buttonEn: 'pasive'
-    //             }
-    //         )
-    //     }
-    //
-    // }
-
+        //set new active language
         const changeLanguage = lng => {
             i18n.changeLanguage(lng);
-            // this.forceUpdate();
-            // appHistory.push('/');
-            // history.go(0);
         };
-        const changeActive = (lang)=>{
-            console.log('active lang is:'+lang);
+
+        //set new active language label
+        const setActiveLanguageLabel = (lang)=>{
             if (lang==='ru'){
-                buttonRu= 'active';
-                buttonEn= 'pasive';
+                statusLanguageRu= 'active';
+                statusLanguageEn= 'pasive';
             }else{
-                buttonRu= 'pasive';
-                buttonEn= 'active';
+                statusLanguageRu= 'pasive';
+                statusLanguageEn= 'active';
             }
         };
+
         return (
             <Fragment >
                 <Container >
@@ -118,7 +105,7 @@ function MenuPrepare (){
                             <Navbar
                                     expanded={expanded}  inverse='true' collapseOnSelect={true} expand="md" variant="dark">
                                 <Navbar.Brand onClick={() =>{
-                                    if (mobileWidth < 993){
+                                    if (displayWidth < 993){
                                         setExpanded( false)}
                                     }
 
@@ -150,7 +137,7 @@ function MenuPrepare (){
                                                 activeClassName={"active"}
                                                 exact={true}
                                                 to="/">
-                                                <Trans i18nKey="menu_main">Главная</Trans>
+                                                <Trans i18nKey="menu_main">Main</Trans>
                                             </NavLink>
                                         </li>
                                         <li className="menu-item">
@@ -162,7 +149,7 @@ function MenuPrepare (){
                                                 className="nav-link"
                                                 activeClassName="active"
                                                 to="/Services" >
-                                                <Trans i18nKey="menu_serv">Услуги</Trans>
+                                                <Trans i18nKey="menu_serv">Services</Trans>
                                             </NavLink>
                                         </li>
 
@@ -175,7 +162,7 @@ function MenuPrepare (){
                                                 className="nav-link"
                                                 activeClassName="active"
                                                 to="/About" >
-                                                <Trans i18nKey="menu_about">О нас </Trans>
+                                                <Trans i18nKey="menu_about">About</Trans>
                                             </NavLink>
                                         </li>
                                         <li className="menu-item">
@@ -187,7 +174,7 @@ function MenuPrepare (){
                                                 className="nav-link"
                                                 activeClassName="active"
                                                 to="/Price" >
-                                                <Trans i18nKey="menu_price">Прайс</Trans>
+                                                <Trans i18nKey="menu_price">Price</Trans>
                                             </NavLink>
                                         </li>
 
@@ -200,22 +187,22 @@ function MenuPrepare (){
                                                 className="nav-link"
                                                 activeClassName="active"
                                                 to="/Contact" >
-                                                <Trans i18nKey="menu_cont">Контакты </Trans>
+                                                <Trans i18nKey="menu_cont">Contact </Trans>
                                             </NavLink>
                                         </li>
 
                                         <Nav className="switch-language">
-                                            <Button className={buttonRu}  variant="light"
+                                            <Button className={"switch-language__button " + statusLanguageRu}  variant="light"
                                                 onClick={() => {
                                                     changeLanguage("ru");
-                                                    changeActive("ru");
+                                                    setActiveLanguageLabel("ru");
                                                     dispatch(myLang('ru'));
                                                 }}
                                             >ru</Button >
-                                            <Button className={buttonEn} variant="light"
+                                            <Button className={"switch-language__button " + statusLanguageEn} variant="light"
                                                 onClick={() => {
                                                     changeLanguage("en");
-                                                    changeActive("en");
+                                                    setActiveLanguageLabel("en");
                                                     dispatch(myLang('en'));
                                                 }}
                                             >en</Button >
