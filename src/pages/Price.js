@@ -6,13 +6,13 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
 
-import Price__short from  './parts/Price__short';
+import PriceShort from './parts/PriceShort';
 
 class Price extends  Component{
     render(){
         return(
             <Fragment>
-                <Price__short isheader='true' titlei18nkey='price_title' titlei18text='Price'/>
+                <PriceShort isheader='true' titlei18nkey='price_title' titlei18text='Price'/>
             </Fragment>
         )
     }
