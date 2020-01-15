@@ -12,14 +12,14 @@ import ContainerService from "./parts/ContainerService";
 function ServicesPrepare (){
         return(
             <Fragment>
-                <div className="section-services section">
+                <section className="section-services section page">
                     <Title isheader='true' titlei18nkey='services_title' titlei18text='Services'/>
                     <Container >
                         <Row className='boxes'>
                                 <ContainerService backpath='p' />
                         </Row>
                     </Container>
-                </div>
+                </section>
 
             </Fragment>
         )

@@ -1,13 +1,13 @@
 import React,{Fragment, useState } from "react";
 import {NavLink} from 'react-router-dom';
 import { withTranslation, Trans  } from 'react-i18next';
-import i18n from './i18n';
+import i18n from '../../component/i18n';
 
 import  {useSelector, useDispatch} from 'react-redux';
 
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
-import goalImg from '../images/logo_white.png';
+import goalImg from '../../images/logo_white.png';
 
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -15,7 +15,7 @@ import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 
 import {isEmpty, isLoaded} from "react-redux-firebase";
-import {myLang} from "../store/language/action";
+import {myLang} from "../../store/language/action";
 
 function MenuPrepare (){
 

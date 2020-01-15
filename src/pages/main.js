@@ -14,7 +14,7 @@ function MainPrepare() {
         return (
             <Fragment>
                 <Welcome/>
-                <div className="section-services section">
+                <section  className="services section part">
                     <Container>
                         <Row className='boxes'>
                             <Col lg='12'>
@@ -25,7 +25,7 @@ function MainPrepare() {
                             <ContainerService backpath='m'  />
                         </Row>
                     </Container>
-                </div>
+                </section>
                 <AboutMain isheader='false' titlei18nkey='about_title' titlei18text='About Us'/>
                 <ContactForm isheader='false' titlei18nkey='contact_title' titlei18text='Contact us'/>
             </Fragment>

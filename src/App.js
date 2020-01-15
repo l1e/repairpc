@@ -8,8 +8,8 @@ import {useFirebaseConnect} from "react-redux-firebase";
 
 import  {useDispatch} from 'react-redux';
 
-import Header from './component/Header';
-import Footer from "./component/Footer";
+import Header from './pages/parts/Header';
+import Footer from "./pages/parts/Footer";
 
 import Main from './pages/Main';
 import Services from "./pages/Services";
