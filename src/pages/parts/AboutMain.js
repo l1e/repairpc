@@ -5,8 +5,8 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
-import aboutFace from '../../images/face.jpg';
-import aboutCertificate from '../../images/certificate.jpg';
+import aboutFace from '../../images/face.webp';
+import aboutCertificate from '../../images/certificate.webp';
 import Title from './Title';
 class About__mainPrepare extends  Component{
     render(){
