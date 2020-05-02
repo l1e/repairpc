@@ -1,11 +1,15 @@
-This is a simple react.js website.
+###This is a simple react.js website.
 
-You have to only connect your project to Firebase realtime database and you can build or run this template. 
+In this app i use those technologies and packages: redux,react-firebase/database, i18next, google-map-react,react-router-dom, react-bootstrap and so on.
+<br><br>
+#####You have to connect your project to Firebase realtime database and you can build or run this template. 
 To do that:
 1) Create Firebase realtime database.
 2) Import file database.json to database.
 2) Change to new web app's Firebase configuration to db in file <code>src/config/firebase.js </code> .
 
+
+<br>
 #### Available Scripts
 In the project directory, you can run:
 
