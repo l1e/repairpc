@@ -5,9 +5,11 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
+import googleIcon from '../../images/google-icon.png';
+
 import { withTranslation, Trans  } from 'react-i18next';
 
-const AnyReactComponent = ({ text }) => <div>{text}</div>;
+const AnyReactComponent = ({ text }) => <div className="google-icon">{text}</div>;
 
 class MapPrepare extends Component {
     static defaultProps = {
@@ -36,7 +38,7 @@ class MapPrepare extends Component {
                                 <AnyReactComponent
                                     lat={48.450902}
                                     lng={35.018797}
-                                    text="We are here"
+                                    text=""
                                 />
                             </GoogleMapReact>
                         </div>
