@@ -11,10 +11,10 @@ function Footer() {
                     <Row>
                         <Col>
                             <p className="footer_year">
-                                © 2020
+                                Copyright © 2020
                             </p>
                             <p className="footer__prone">
-                                <a href="tel:+380663653035">+380663653035</a>
+                                <a href="mailto:myemail@example.com">myemail@example.com</a>
                             </p>
                         </Col>
                     </Row>
