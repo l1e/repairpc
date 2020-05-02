@@ -1,6 +1,4 @@
-import React,{Fragment,Component} from 'react';
-import i18n from "../../component/i18n";
-
+import React,{Fragment} from 'react';
 
 import {Link} from "react-router-dom";
 import Button from 'react-bootstrap/Button';
@@ -20,6 +18,7 @@ function ServicePrepare(props){
     };
 
     let myActiveLanguage = props.lang;
+    let backpath= props.backpath;
     // console.log(myActiveLanguage);
         return(
             <Fragment>{
@@ -43,7 +42,7 @@ function ServicePrepare(props){
                                             cutStringToValue(item.en.descr)
                                         )}
                                     </p>
-                                    <Link to={"ConverLink/"+item.id} id={item.id}>
+                                    <Link to={"ConverLink/"+item.id+backpath} id={item.id} >
                                         <Button className='box__button' variant="primary"> <Trans i18nKey="services_detailed">Наши услуги</Trans></Button>
                                     </Link>
                                 </div>

@@ -1,7 +1,12 @@
 
 .header
-  background-color: $repair-header__background
-  border-bottom: 1px solid $repair-header__border
+  //background-color: $repair-header__background
+  //border-bottom: 1px solid $repair-header__border
+  position: absolute
+  top: 0px
+  width: 100%
+  //box-shadow: 1px -1px 10px 2px rgba(179,179,179,1)
+  z-index: 1
 
 
 .navbar
@@ -32,25 +37,38 @@
 
 .switch-language
   margin-left: 10px
+  align-items: center
 
-.switch-language button
+
+.switch-language__button
   margin: 0px 5px
+  height: 30px
+  padding: 0.19rem 0.45rem
+  line-height: 0px
 
 button.active
   background-color: #b6c5d2
   border-color: #d3d9df
 
+.active.nav-link
+  border-bottom: 2px solid $repair-blue
+
+
 @media (max-width: 991.98px)
   .switch-language
-    margin: 15px auto
     display: flex
     justify-content: center
     align-items: center
     flex-direction: row
 
-  .switch-language button
+  .switch-language__button
     max-width: 45px
     margin: 0px 10px
+
+@media (max-width: 767.98px)
+  .header
+    background-color: $repair-header__background-mobile
+    padding-bottom: 11px
 
 @media (max-width: 575.98px)
   html

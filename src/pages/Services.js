@@ -1,9 +1,10 @@
 import React,{Fragment} from 'react';
-import { withTranslation, Trans  } from 'react-i18next';
+import { withTranslation } from 'react-i18next';
 
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+
+import Title from './parts/Title';
 
 import ContainerService from "./parts/ContainerService";
 
@@ -11,18 +12,14 @@ import ContainerService from "./parts/ContainerService";
 function ServicesPrepare (){
         return(
             <Fragment>
-                <div className="section-services section">
+                <section className="section-services section page">
+                    <Title isheader='true' titlei18nkey='services_title' titlei18text='Services'/>
                     <Container >
                         <Row className='boxes'>
-                            <Col lg='12'>
-                                <h2 className='section-services__title section-title'>
-                                    <Trans i18nKey="services_title">Наши услуги</Trans>
-                                </h2>
-                            </Col>
-                                <ContainerService/>
+                                <ContainerService backpath='p' />
                         </Row>
                     </Container>
-                </div>
+                </section>
 
             </Fragment>
         )

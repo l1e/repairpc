@@ -9,12 +9,12 @@ import Col from 'react-bootstrap/Col';
 import ContainerService from "./parts/ContainerService";
 import ContactForm from "./parts/ContactForm";
 import Welcome from "./parts/Welcome";
-import About__main from "./parts/About__main";
+import AboutMain from "./parts/AboutMain";
 function MainPrepare() {
         return (
             <Fragment>
                 <Welcome/>
-                <div className="section-services section">
+                <section  className="services section part">
                     <Container>
                         <Row className='boxes'>
                             <Col lg='12'>
@@ -22,12 +22,12 @@ function MainPrepare() {
                                     <Trans i18nKey="services_title">Наши услуги</Trans>
                                 </h2>
                             </Col>
-                            <ContainerService />
+                            <ContainerService backpath='m'  />
                         </Row>
                     </Container>
-                </div>
-                <About__main/>
-                <ContactForm/>
+                </section>
+                <AboutMain isheader='false' titlei18nkey='about_title' titlei18text='About Us'/>
+                <ContactForm isheader='false' titlei18nkey='contact_title' titlei18text='Contact us'/>
             </Fragment>
         )
 }

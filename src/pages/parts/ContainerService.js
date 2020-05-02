@@ -3,7 +3,7 @@ import Service from "./Service";
 import {isEmpty, isLoaded} from "react-redux-firebase";
 import  {useSelector} from 'react-redux';
 
-function ContainerService (){
+function ContainerService (props){
     let newData ;
     const articlesData = useSelector(state => state.base.data.articles);
     const language= useSelector(state=> state.myLang);
@@ -24,7 +24,7 @@ function ContainerService (){
     // console.log(language);
     // console.log(newData);
     return(
-        <Service lang={language} articles={newData} />
+        <Service lang={language} articles={newData} backpath={props.backpath}  />
     )
 }
 

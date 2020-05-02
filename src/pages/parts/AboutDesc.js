@@ -5,11 +5,11 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
-class About__descPrepare extends  Component{
+class AboutDescPrepare extends  Component{
     render(){
         return(
             <Fragment>
-                <div className="section-about__desc section">
+                <section className="section-about__desc section">
                     <Container >
                         <Row>
                             <Col lg='12'>
@@ -24,12 +24,12 @@ class About__descPrepare extends  Component{
                             </Col>
                         </Row>
                     </Container>
-                </div>
+                </section>
 
             </Fragment>
         )
     }
 }
 
-const About__desc = withTranslation()(About__descPrepare);
-export default About__desc;
+const AboutDesc = withTranslation()(AboutDescPrepare);
+export default AboutDesc;

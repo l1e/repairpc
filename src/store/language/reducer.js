@@ -5,7 +5,6 @@ export  const myLangReducer =( state = false , action) => {
         default:
             return state;
     }
-    return state;
 };
 
 export  const setMyLangReducer =( state = true , action) => {
@@ -15,6 +14,5 @@ export  const setMyLangReducer =( state = true , action) => {
         default:
             return state;
     }
-    return state;
 };
 
