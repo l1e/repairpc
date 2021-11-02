@@ -42,7 +42,7 @@ function MenuPrepare (){
 
     //waiting for get language from store
     if (!isLoaded(myStoreLang)) {
-        return <Trans i18nKey="language_status_loading">Loading</Trans>;
+        return <Trans i18nKey="language_status_loading"><span className="preloader">Loading</span></Trans>;
     }
 
     // check about existing data in language variable

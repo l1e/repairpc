@@ -43,9 +43,9 @@ function App() {
               <Header />
                 <Switch>
 
-                  <Route exact path='/'>
-                      <Main />
-                  </Route>
+                    <Route exact path='/'>
+                        <Main />
+                    </Route>
 
                     <Route path="/services">
                       <Services/>

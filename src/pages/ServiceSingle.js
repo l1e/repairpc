@@ -56,7 +56,7 @@ function ServiceSingle (props){
 
     //waiting for get article from store
     if (!isLoaded(articlesData)) {
-        return <Trans i18nKey="service_status_loading">Loading</Trans>;
+        return <Trans i18nKey="service_status_loading"><span className="preloader">Loading</span></Trans>;
     }
     // check about existing data in articles variable
     if (isEmpty(articlesData)) {

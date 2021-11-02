@@ -14,8 +14,8 @@ const AnyReactComponent = ({ text }) => <div className="google-icon">{text}</div
 class MapPrepare extends Component {
     static defaultProps = {
         center: {
-            lat: 48.450902,
-            lng: 35.018797
+            lat: 48.467000,
+            lng: 35.019800
         },
         zoom: 15
     };
@@ -31,13 +31,13 @@ class MapPrepare extends Component {
                             </h2>
                             <div className='map__map'>
                             <GoogleMapReact
-                                bootstrapURLKeys={{ key:'AIzaSyAhEinEuiO3IXu7YxlgShb1fv9I47WA3Y8' }}
+                                bootstrapURLKeys={{ key:'AIzaSyAryHyCdq2YtgT9iJTiQ-mxFhaaEQs1SB8' }}
                                 defaultCenter={this.props.center}
                                 defaultZoom={this.props.zoom}
                             >
                                 <AnyReactComponent
-                                    lat={48.450902}
-                                    lng={35.018797}
+                                    lat={48.467000}
+                                    lng={35.019800}
                                     text=""
                                 />
                             </GoogleMapReact>

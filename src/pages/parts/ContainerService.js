@@ -9,7 +9,7 @@ function ContainerService (props){
     const language= useSelector(state=> state.myLang);
     if (!isLoaded(articlesData)) {
         // console.log(articlesData);
-        return "Loading";
+        return <span className="preloader">Loading</span>;
     }
     // Show a message if there are no todos
     if (isEmpty(articlesData)) {
