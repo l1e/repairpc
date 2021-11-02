@@ -10,6 +10,8 @@ import  {useDispatch} from 'react-redux';
 
 import Header from './pages/parts/Header';
 import Footer from "./pages/parts/Footer";
+import Admin from "./pages/admin/Admin";
+
 
 import Main from './pages/Main';
 import Services from "./pages/Services";
@@ -45,20 +47,23 @@ function App() {
                       <Main />
                   </Route>
 
-                    <Route path="/Services">
+                    <Route path="/services">
                       <Services/>
                     </Route>
 
-                    <Route path="/About">
+                    <Route path="/about">
                         <About/>
                     </Route>
 
-                    <Route path="/Contact">
+                    <Route path="/contact">
                         <Contact/>
                     </Route>
 
-                    <Route path="/Price">
+                    <Route path="/price">
                         <Price/>
+                    </Route>
+                    <Route path="/admin">
+                        <Admin/>
                     </Route>
 
                     <Route path="/ConverLink/:params">

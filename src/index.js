@@ -10,6 +10,7 @@ import { ReactReduxFirebaseProvider } from "react-redux-firebase";
 import firebaseConfig from './config/firebase';
 
 import allReducers from './store/reducer';
+
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
@@ -23,7 +24,7 @@ try {
 const rrfProps = {
     firebase,
     config: {
-        userProfile: "articles"
+        userProfile: "home"
     },
     dispatch: store.dispatch
 };
