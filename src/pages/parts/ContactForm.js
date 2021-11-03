@@ -1,6 +1,6 @@
 import React,{Fragment} from 'react';
 import { withTranslation, Trans  } from 'react-i18next';
-import useForm from 'react-hook-form';
+import { useForm } from 'react-hook-form';
 
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -11,11 +11,7 @@ import Form from 'react-bootstrap/Form';
 import Title from './Title';
 
 function ContactFormPrepare (props){
-    const { register, handleSubmit, errors } = useForm({
-        // by setting validateCriteriaMode to 'all',
-        // all validation errors for single field will display at once
-        validateCriteriaMode: "all"
-    }); // initialise the hook
+const { register, handleSubmit, formState: { errors }, reset } = useForm();
     const onSubmit = data => {
         console.log(data);
     };
@@ -43,20 +39,20 @@ function ContactFormPrepare (props){
                                         <Form onSubmit={handleSubmit(onSubmit)} className='contact__form contact-form'>
                                             <Form.Group controlId="formGroupEmail">
                                                 <Form.Label><Trans i18nKey="contact_label_email">Почта</Trans></Form.Label>
-                                                <Form.Control name="email" ref={register({ required: true, minLength: 5, maxLength: 30 })} type="email" placeholder={t('contact_placeholder_email')} />
+                                                <Form.Control name="email" {...register("email",{required: true , minLength: 5, maxLength: 30 })} type="email" placeholder={t('contact_placeholder_email')} />
                                                 <p className="contact-form__error">
-                                                    {errors.email && errors.email.types.required && (<Trans i18nKey="contact_error_email_required">Почтовый адрес является обязательным</Trans>)}
-                                                    {errors.email && errors.email.types.minLength && (<Trans i18nKey="contact_error_email_minlenght">Минимальное количество символов 5</Trans>)}
-                                                    {errors.email && errors.email.types.maxLength && (<Trans i18nKey="contact_error_email_maxlenght">Максимальное количество символов 30</Trans>)}
+                                                    {errors.email && errors.email.type === "required" && (<Trans i18nKey="contact_error_email_required">Почтовый адрес является обязательным</Trans>)}
+                                                    {errors.email && errors.email.type === "minLength" && (<Trans i18nKey="contact_error_email_minlenght">Минимальное количество символов 5</Trans>)}
+                                                    {errors.email && errors.email.type === "maxLength" && (<Trans i18nKey="contact_error_email_maxlenght">Максимальное количество символов 30</Trans>)}
                                                     </p>
                                             </Form.Group>
                                             <Form.Group controlId="formGroupPassword">
                                                 <Form.Label><Trans i18nKey="contact_label_phone">Номер телефона</Trans></Form.Label>
-                                                <Form.Control name="phone" ref={register({ required: true, minLength: 10, maxLength: 13 })} type="tel"  placeholder={t('contact_placeholder_phone')} />
+                                                <Form.Control name="phone" {...register("phone", {required: true, minLength: 10, maxLength: 13 })} type="tel"  placeholder={t('contact_placeholder_phone')} />
                                                 <p className="contact-form__error">
-                                                    {errors.phone && errors.phone.types.required && (<Trans i18nKey="contact_error_phone_required">Почтовый адрес является обязательным</Trans>)}
-                                                    {errors.phone && errors.phone.types.minLength && (<Trans i18nKey="contact_error_phone_minlenght">Минимальное количество символов 10</Trans>)}
-                                                    {errors.phone && errors.phone.types.maxLength && (<Trans i18nKey="contact_error_phone_maxlenght">Максимальное количество символов 13</Trans>)}
+                                                    {errors.email && errors.email.type === "required" && (<Trans i18nKey="contact_error_phone_required">Почтовый адрес является обязательным</Trans>)}
+                                                    {errors.email && errors.email.type === "minLength" && (<Trans i18nKey="contact_error_phone_minlenght">Минимальное количество символов 10</Trans>)}
+                                                    {errors.email && errors.email.type === "maxLength" && (<Trans i18nKey="contact_error_phone_maxlenght">Максимальное количество символов 13</Trans>)}
                                                 </p>
                                             </Form.Group>
                                             <Button className='contact-form__submit' variant="primary" type="submit">
