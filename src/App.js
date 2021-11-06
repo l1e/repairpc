@@ -8,14 +8,14 @@ import {useFirebaseConnect} from "react-redux-firebase";
 
 import  {useDispatch} from 'react-redux';
 
-import Header from './pages/parts/Header';
-import Footer from "./pages/parts/Footer";
+import Header from '../components/parts/Header';
+import Footer from "../components/parts/Footer";
 import Admin from "./pages/admin/Admin";
 
 
 import Main from './pages/Main';
 import Services from "./pages/Services";
-import Contact from "./pages/Contact";
+import Contact from "../pages/contact";
 import ConverLink from './component/ConverLink';
 import i18n from "./component/i18n";
 
@@ -38,42 +38,44 @@ function App() {
     dispatch(myLang(getCurrLanguage));
 
   return (
-      <Router>
-          <Fragment>
-              <Header />
-                <Switch>
+    //   <Router>
+    //       <Fragment>
+    //           <Header />
+    //             <Switch>
 
-                    <Route exact path='/'>
-                        <Main />
-                    </Route>
+    //                 <Route exact path='/'>
+    //                     <Main />
+    //                 </Route>
 
-                    <Route path="/services">
-                      <Services/>
-                    </Route>
+    //                 <Route path="/services">
+    //                   <Services/>
+    //                 </Route>
 
-                    <Route path="/about">
-                        <About/>
-                    </Route>
+    //                 <Route path="/about">
+    //                     <About/>
+    //                 </Route>
 
-                    <Route path="/contact">
-                        <Contact/>
-                    </Route>
+    //                 <Route path="/contact">
+    //                     <Contact/>
+    //                 </Route>
 
-                    <Route path="/price">
-                        <Price/>
-                    </Route>
-                    <Route path="/admin">
-                        <Admin/>
-                    </Route>
+    //                 <Route path="/price">
+    //                     <Price/>
+    //                 </Route>
+    //                 <Route path="/admin">
+    //                     <Admin/>
+    //                 </Route>
 
-                    <Route path="/ConverLink/:params">
-                        <ConverLink/>
-                    </Route>
+    //                 <Route path="/ConverLink/:params">
+    //                     <ConverLink/>
+    //                 </Route>
 
-                 </Switch>
-              <Footer />
-          </Fragment>
-      </Router>
+    //              </Switch>
+    //           <Footer />
+    //       </Fragment>
+    //   </Router>
+
+    <p>h</p>
   );
 }
 

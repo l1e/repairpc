@@ -5,7 +5,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
-import googleIcon from '../../images/google-icon.png';
+import googleIcon from '../../public/images/google-icon.png';
 
 import { withTranslation, Trans  } from 'react-i18next';
 

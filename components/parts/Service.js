@@ -1,10 +1,10 @@
 import React,{Fragment} from 'react';
 
-import {Link} from "react-router-dom";
+import Link from 'next/link';
 import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 
-import imgRepairPc from '../../images/services_repairpc.webp';
+// import imgRepairPc from '../../images/services_repairpc.webp';
 import { Trans, withTranslation  } from 'react-i18next';
 
 function ServicePrepare(props){
@@ -26,7 +26,7 @@ function ServicePrepare(props){
                     return (
                             <Col key={index} lg='4' md='6' sm='12'>
                                 <div className='box' >
-                                    <img src={imgRepairPc} alt="" className="box__img"/>
+                                    <img src="/images/services_repairpc.webp" alt="" className="box__img"/>
                                     <h3 className="box__title">
 
                                         {myActiveLanguage === "ru" ? (
@@ -42,8 +42,10 @@ function ServicePrepare(props){
                                             cutStringToValue(item.en.descr)
                                         )}
                                     </p>
-                                    <Link to={"ConverLink/"+item.id+backpath} id={item.id} >
+                                    <Link href={"ConverLink/"+item.id+backpath}  id={item.id} >
+                                        <a >
                                         <Button className='box__button' variant="primary"> <Trans i18nKey="services_detailed">Наши услуги</Trans></Button>
+                                        </a>
                                     </Link>
                                 </div>
                             </Col>

@@ -1,7 +1,7 @@
 import React,{Fragment,Component} from 'react';
 
-import AboutMain from "./parts/AboutMain";
-import AboutDesc from "./parts/AboutDesc";
+import AboutMain from "../../components/parts/AboutMain";
+import AboutDesc from "../../components/parts/AboutDesc";
 
 class About extends  Component{
     render(){

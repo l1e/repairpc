@@ -1,14 +1,15 @@
-import React,{Fragment, useState } from "react";
-import {NavLink} from 'react-router-dom';
+import React,{Fragment, useState, useEffect } from "react";
+import Link from 'next/link';
 import { withTranslation, Trans  } from 'react-i18next';
-import i18n from '../../component/i18n';
+import i18n from '../../src/component/i18n';
 
 import  {useSelector, useDispatch} from 'react-redux';
 
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
-import goalImg from '../../images/logo_white.png';
+// import goalImg from '../../images/logo_white.png';
 
+import { useRouter } from 'next/router'
 
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -16,12 +17,20 @@ import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 
 import {isEmpty, isLoaded} from "react-redux-firebase";
-import {myLang} from "../../store/language/action";
+import {myLang} from "../../src/store/language/action";
 
 function MenuPrepare (){
 
     //Here we have two const for collapse menu.
     const [expanded, setExpanded] = useState(false);
+
+
+    const router = useRouter();
+
+    const route_current = router.route;
+    console.log(route_current);
+
+
 
     //In this valible i set active language
     let myActiveLanguage ;
@@ -31,7 +40,10 @@ function MenuPrepare (){
     let statusLanguageEn = 'active';
 
     //optimize mobile menu
-    let displayWidth= window.innerWidth;
+    let displayWidth;
+    if (typeof window !== "undefined") {
+        displayWidth= window.innerWidth;
+    }
     // let mobileMenu = false;
 
     //create dispatch
@@ -39,6 +51,8 @@ function MenuPrepare (){
 
     //get language from store
     const myStoreLang = useSelector(state => state.myLang);
+
+    console.log(myStoreLang);
 
     //waiting for get language from store
     if (!isLoaded(myStoreLang)) {
@@ -54,6 +68,8 @@ function MenuPrepare (){
     //set current language and change button class
     if (isLoaded(myStoreLang)) {
         myActiveLanguage = myStoreLang;
+
+        console.log(myActiveLanguage);
         if (myActiveLanguage==='ru'){
             statusLanguageRu= 'active';
             statusLanguageEn= 'pasive';
@@ -70,25 +86,30 @@ function MenuPrepare (){
     //     mobileMenu = false;
     // }
 
-    window.addEventListener("resize", ()=>{
-        console.log(myActiveLanguage);
-        displayWidth = window.innerWidth;
+    // window.addEventListener("resize", ()=>{
+    //     console.log(myActiveLanguage);
+    //     displayWidth = window.innerWidth;
 
-        // if (displayWidth < 993){
-        //     mobileMenu = true;
-        // }else{
-        //     mobileMenu = false;
-        // }
-        // console.log(mobileMenu);
-    });
+    //     // if (displayWidth < 993){
+    //     //     mobileMenu = true;
+    //     // }else{
+    //     //     mobileMenu = false;
+    //     // }
+    //     // console.log(mobileMenu);
+    // });
 
         //set new active language
         const changeLanguage = lng => {
             i18n.changeLanguage(lng);
         };
 
+
         //set new active language label
         const setActiveLanguageLabel = (lang)=>{
+
+            console.log(lang);
+
+
             if (lang==='ru'){
                 statusLanguageRu= 'active';
                 statusLanguageEn= 'pasive';
@@ -98,6 +119,12 @@ function MenuPrepare (){
             }
         };
 
+
+
+        useEffect(() => {
+            // Always do navigations after the first render
+            setActiveLanguageLabel();
+          }, [])
         return (
             <Fragment >
                 <Container >
@@ -111,13 +138,15 @@ function MenuPrepare (){
                                     }
 
                                 }>
-                                    <NavLink
-                                        onClick={()=>{
-                                            setExpanded(false);
-                                        }}
-                                        to='/'>
-                                        <img className="logo" src={goalImg} alt=""/>
-                                    </NavLink>
+                                    <Link href="/">
+                                        <a
+                                            onClick={()=>{
+                                                setExpanded(false);
+                                            }}
+                                            >
+                                            <img className="logo" src="/images/logo_white.png" alt=""/>
+                                        </a>
+                                    </Link>
                                 </Navbar.Brand>
 
                                 <Navbar.Toggle
@@ -129,67 +158,77 @@ function MenuPrepare (){
 
                                     <Nav className="ml-auto">
                                         <li className="menu-item">
-                                            <NavLink
-                                                onClick={()=>{
+                                            <Link href="/">
+                                                <a
+                                                    onClick={()=>{
+                                                            setExpanded(false);
+                                                    }}
+                                                    eventkey="1"
+                                                    className={"nav-link "+(route_current=== '/' ? 'active': '')}
+                                                    activeClassName={"active"}
+                                                    exact={true}
+                                                    >
+                                                    <Trans i18nKey="menu_main">Main</Trans>
+                                                </a>
+                                            </Link>
+                                        </li>
+                                        <li className="menu-item">
+                                            <Link href="/services">
+                                                <a
+                                                    onClick={()=>{
                                                         setExpanded(false);
-                                                }}
-                                                eventkey="1"
-                                                className="nav-link"
-                                                activeClassName={"active"}
-                                                exact={true}
-                                                to="/">
-                                                <Trans i18nKey="menu_main">Main</Trans>
-                                            </NavLink>
-                                        </li>
-                                        <li className="menu-item">
-                                            <NavLink
-                                                onClick={()=>{
-                                                    setExpanded(false);
-                                                }}
-                                                eventkey="2"
-                                                className="nav-link"
-                                                activeClassName="active"
-                                                to="/Services" >
-                                                <Trans i18nKey="menu_serv">Services</Trans>
-                                            </NavLink>
+                                                    }}
+                                                    eventkey="2"
+                                                    className={"nav-link "+(route_current=== '/services' ? 'active': '')}
+                                                    activeClassName="active"
+                                                    >
+                                                    <Trans i18nKey="menu_serv">Services</Trans>
+                                                </a>
+                                            </Link>
                                         </li>
 
                                         <li className="menu-item">
-                                            <NavLink
-                                                onClick={()=>{
-                                                    setExpanded(false);
-                                                }}
-                                                eventkey="3"
-                                                className="nav-link"
-                                                activeClassName="active"
-                                                to="/About" >
-                                                <Trans i18nKey="menu_about">About</Trans>
-                                            </NavLink>
+                                            <Link href="/about">
+                                                <a
+                                                    onClick={()=>{
+                                                        setExpanded(false);
+                                                    }}
+                                                    eventkey="3"
+                                                    className={"nav-link "+(route_current=== '/about' ? 'active': '')}
+                                                    activeClassName="active"
+                                                    to="/About" >
+                                                    <Trans i18nKey="menu_about">About</Trans>
+                                                </a>
+                                            </Link>
                                         </li>
                                         <li className="menu-item">
-                                            <NavLink
-                                                onClick={()=>{
-                                                    setExpanded(false);
-                                                }}
-                                                eventkey="3"
-                                                className="nav-link"
-                                                activeClassName="active"
-                                                to="/Price" >
-                                                <Trans i18nKey="menu_price">Price</Trans>
-                                            </NavLink>
+                                            <Link href="/price">
+                                                <a
+                                                    onClick={()=>{
+                                                        setExpanded(false);
+                                                    }}
+                                                    eventkey="3"
+                                                    className={"nav-link "+(route_current=== '/price' ? 'active': '')}
+                                                    activeClassName="active"
+                                                    to="/Price" >
+                                                    <Trans i18nKey="menu_price">Price</Trans>
+                                                </a>
+                                            </Link>
                                         </li>
 
                                         <li className="menu-item">
-                                            <NavLink
+                                            <Link href="/contact">
+                                            <a
                                                 onClick={()=>{
                                                     setExpanded(false);
                                                 }}
                                                 eventkey="4"
-                                                className="nav-link"
+                                                className={"nav-link "+(route_current=== '/contact' ? 'active': '')}
                                                 activeClassName="active"
                                                 to="/Contact" >
                                                 <Trans i18nKey="menu_cont">Contact </Trans>
-                                            </NavLink>
+                                            </a>
+                                            </Link>
                                         </li>
 
                                         <Nav className="switch-language">

@@ -6,12 +6,16 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
-import ContainerService from "../../components/parts/ContainerService";
-import ContactForm from "../../components/parts/ContactForm";
-import Welcome from "../../components/parts/Welcome";
-import AboutMain from "../../components/parts/AboutMain";
-function MainPrepare() {
-        return (
+import ContainerService from "../components/parts/ContainerService";
+import ContactForm from "../components/parts/ContactForm";
+import Welcome from "../components/parts/Welcome";
+import AboutMain from "../components/parts/AboutMain";
+
+import Layout from "../components/layouts/Layout";
+
+function HomePrepare() {
+    return (
+        <Layout>
             <Fragment>
                 <Welcome/>
                 <section  className="services section part">
@@ -29,8 +33,9 @@ function MainPrepare() {
                 <AboutMain isheader='false' titlei18nkey='about_title' titlei18text='About Us'/>
                 <ContactForm isheader='false' titlei18nkey='contact_title' titlei18text='Contact us'/>
             </Fragment>
-        )
+        </Layout>
+    )
 }
-const Main = withTranslation()(MainPrepare);
+const Home = withTranslation()(HomePrepare);
 
-export default Main;
+export default Home;

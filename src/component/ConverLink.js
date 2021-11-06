@@ -1,7 +1,7 @@
 import React,{Fragment} from 'react';
 
 import {useParams} from "react-router-dom";
-import ServiceSingle from "../pages/ServiceSingle";
+import ServiceSingle from "../../components/parts/ServiceSingle";
 
 import {  withTranslation  } from 'react-i18next';
 
@@ -14,7 +14,7 @@ function  ConvertLinkPrepare (){
         let id =  params.slice(0, -1);
         let getBackpath = params.charAt(params.length-1);
         let backpath = 0;
-        console.log(getBackpath) ;
+        // console.log(getBackpath) ;
         if (getBackpath.includes('m')===true){
             // console.log('from main Page');
             backpath = '/';

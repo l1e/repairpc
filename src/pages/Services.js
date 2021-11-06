@@ -4,9 +4,9 @@ import { withTranslation } from 'react-i18next';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 
-import Title from './parts/Title';
+import Title from '../../components/parts/Title';
 
-import ContainerService from "./parts/ContainerService";
+import ContainerService from "../../components/parts/ContainerService";
 
 
 function ServicesPrepare (){

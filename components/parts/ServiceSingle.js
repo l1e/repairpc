@@ -11,12 +11,13 @@ import { Trans  } from 'react-i18next';
 import {isEmpty, isLoaded} from "react-redux-firebase/";
 import {useSelector} from "react-redux";
 
-import Title from './parts/Title';
+import Title from './Title';
 
 
-import {Link} from 'react-router-dom';
+import Link from 'next/link';
 
 function ServiceSingle (props){
+    // console.log(props);
     //my article id
     let idArticle = props.id;
 
@@ -30,10 +31,12 @@ function ServiceSingle (props){
     const articlesData = useSelector(state => state.base.data.articles);
     const language= useSelector(state=> state.myLang);
 
+    // console.log(articlesData);
+
 
     //set current article function
     const setCurrentArticle =(props) =>{
-        console.log(backpath);
+        // console.log(backpath);
         let dataArticle=[];
         let сurrLanguage = language;
         for (let i = 0; i < props.length ; i++){
@@ -56,7 +59,7 @@ function ServiceSingle (props){
 
     //waiting for get article from store
     if (!isLoaded(articlesData)) {
-        return <Trans i18nKey="service_status_loading"><span className="preloader">Loading</span></Trans>;
+        return <Trans i18nKey="service_status_loading"><span className="preloader">1Loading...</span></Trans>;
     }
     // check about existing data in articles variable
     if (isEmpty(articlesData)) {
@@ -67,7 +70,7 @@ function ServiceSingle (props){
     if (isLoaded(articlesData)) {
         let newData = Object.values(articlesData);
         setCurrentArticle(newData);
-        console.log(newData);
+        // console.log(newData);
     }
     // console.log(currentArticle);
 
@@ -82,9 +85,13 @@ function ServiceSingle (props){
                             <div className="service-single">
                                 {/*{<p className='service-single__title'>{currentArticle.title}</p>}*/}
                                 <p className='service-single__desc'> {currentArticle.description} </p>
-                                <Link to={backpath} >
-                                    <Button variant="primary" className="service-single__back" onClick={()=>{}}> Back </Button>
+                                
+                                <Link href={backpath} >
+                                    <a>
+                                        <Button variant="primary" className="service-single__back" onClick={()=>{}}> Back </Button>
+                                    </a>
                                 </Link>
+
                             </div>
                         </Col>
                     </Row>

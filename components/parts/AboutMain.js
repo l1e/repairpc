@@ -5,8 +5,6 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
-import aboutFace from '../../images/face.webp';
-import aboutCertificate from '../../images/certificate.webp';
 import Title from './Title';
 class About__mainPrepare extends  Component{
     render(){
@@ -21,7 +19,7 @@ class About__mainPrepare extends  Component{
                             <Col md='12' lg='6' >
                                 <Row className="about-main__inner-left">
                                     <Col className="about-main__inner-image" md='5' lg='5'>
-                                        <img alt="" src={aboutFace} className="about-main__face" />
+                                        <img alt="" src="/images/face.webp" className="about-main__face" />
                                     </Col>
                                     <Col md='7' lg='7' className="about-main__inner-bio" >
                                         <p className="about_biography">
@@ -48,10 +46,10 @@ class About__mainPrepare extends  Component{
                             <Col md='12' lg='6'>
                                 <Row className="about-main_inner-right">
                                     <Col md='6' lg='6'>
-                                        <img alt="" src={aboutCertificate} className="about-main__certificate" />
+                                        <img alt="" src="/images/certificate.webp" className="about-main__certificate" />
                                     </Col>
                                     <Col md='6' lg='6'>
-                                        <img alt="" src={aboutCertificate} className="about-main__certificate" />
+                                        <img alt="" src="/images/certificate.webp" className="about-main__certificate" />
                                     </Col>
                                 </Row>
                             </Col>

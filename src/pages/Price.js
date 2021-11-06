@@ -1,6 +1,6 @@
 import React,{Fragment,Component} from 'react';
 
-import PriceShort from './parts/PriceShort';
+import PriceShort from '../../components/parts/PriceShort';
 
 class Price extends  Component{
     render(){

@@ -6,7 +6,6 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
-import imgContact from '../../images/contact3.webp';
 import Form from 'react-bootstrap/Form';
 import Title from './Title';
 
@@ -26,7 +25,7 @@ const { register, handleSubmit, formState: { errors }, reset } = useForm();
                             <Row >
                                 <Col lg='6'>
                                     <div className="contact__image-inner">
-                                        <img className='contact__img' src={imgContact} alt=""/>
+                                        <img className='contact__img' src="./images/contact3.webp" alt=""/>
                                     </div>
                                 </Col>
 
