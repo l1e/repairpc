@@ -1,7 +1,7 @@
 import React,{Fragment, useState, useEffect } from "react";
 import Link from 'next/link';
 import { withTranslation, Trans  } from 'react-i18next';
-import i18n from '../../src/component/i18n';
+import i18n from '../i18n';
 
 import  {useSelector, useDispatch} from 'react-redux';
 
@@ -17,7 +17,7 @@ import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 
 import {isEmpty, isLoaded} from "react-redux-firebase";
-import {myLang} from "../../src/store/language/action";
+import {myLang} from "../../store/language/action";
 
 function MenuPrepare (){
 

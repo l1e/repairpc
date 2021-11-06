@@ -14,9 +14,6 @@ import {  withTranslation  } from 'react-i18next';
 
 import * as firebase from 'firebase';
 
-
-import firebaseConfig from '../../src/config/firebase';
-
 import Layout from "../../components/layouts/Layout";
 
 export default function Index({page_id,backpath}) {

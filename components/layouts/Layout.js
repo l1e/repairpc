@@ -4,19 +4,19 @@ import Footer from "../parts/Footer";
 import Head from "next/head";
 
 
-import '../../src/component/i18n';
+import '../i18n';
 import {useFirebaseConnect} from "react-redux-firebase";
 
 import  {useDispatch} from 'react-redux';
 
-import i18n from '../../src/component/i18n';
+import i18n from '../i18n';
 
 const todosQuery = {
   path: "articles",
   queryParams: ["limitToLast=10"]
 };
 
-import {myLang} from '../../src/store/language/action';
+import {myLang} from '../../store/language/action';
 
 
 
