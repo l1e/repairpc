@@ -22,11 +22,11 @@ function ServicePrepare(props){
     // console.log(myActiveLanguage);
         return(
             <Fragment>{
-                    props.articles.map((item, index) => {
+                    props.articles.slice(0, 3).map((item, index) => {
                     return (
                             <Col key={index} lg='4' md='6' sm='12'>
                                 <div className='box' >
-                                    <img src="/images/services_repairpc.webp" alt="" className="box__img"/>
+                                    <img src={"/images/services/services_repair_"+index+".jpg"} alt="" className="box__img"/>
                                     <h3 className="box__title">
 
                                         {myActiveLanguage === "ru" ? (
