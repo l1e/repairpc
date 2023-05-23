@@ -6,20 +6,20 @@ import Col from 'react-bootstrap/Col';
 
 function Footer() {
     return (
-            <footer className="footer">
-                <Container >
-                    <Row>
-                        <Col>
-                            <p className="footer_year">
-                                Copyright © 2021
-                            </p>
-                            <p className="footer__prone">
-                                <a href="mailto:mefston@protonmail.com">mefston@protonmail.com</a>
-                            </p>
-                        </Col>
-                    </Row>
-                </Container>
-            </footer>
+        <footer className="footer">
+            <Container >
+                <Row>
+                    <Col>
+                        <p className="footer_year">
+                            Copyright © 2023
+                        </p>
+                        <p className="footer__prone">
+                            <a href="mailto:mefston@protonmail.com">mefston@protonmail.com</a>
+                        </p>
+                    </Col>
+                </Row>
+            </Container>
+        </footer>
     )
 }
 

@@ -1,9 +1,9 @@
-import {Provider} from  'react-redux'
+import { Provider } from 'react-redux'
 
 import { createStore, applyMiddleware } from 'redux'
 import { composeWithDevTools } from 'redux-devtools-extension'
 
-import * as firebase from 'firebase';
+import firebase from 'firebase/compat/app';
 import { ReactReduxFirebaseProvider } from "react-redux-firebase";
 
 import firebaseConfig from '../config/firebase';
@@ -14,9 +14,9 @@ import '../styles/index.sass';
 
 
 import '../components/i18n';
-import {useFirebaseConnect} from "react-redux-firebase";
+import { useFirebaseConnect } from "react-redux-firebase";
 
-import  {useDispatch} from 'react-redux';
+import { useDispatch } from 'react-redux';
 
 import i18n from '../components/i18n';
 
@@ -33,23 +33,23 @@ function MyApp({ Component, pageProps }) {
 
   let store = createStore(allReducers,
     composeWithDevTools(applyMiddleware()));
-    
-    try {
-        firebase.initializeApp(firebaseConfig);
-    } catch (err) {}
-    
-    const rrfProps = {
-        firebase,
-        config: {
-            userProfile: "home"
-        },
-        dispatch: store.dispatch
-    };
+
+  try {
+    firebase.initializeApp(firebaseConfig);
+  } catch (err) { }
+
+  const rrfProps = {
+    firebase,
+    config: {
+      userProfile: "home"
+    },
+    dispatch: store.dispatch
+  };
 
   return (
     <Provider store={store}>
-        <ReactReduxFirebaseProvider {...rrfProps}>
-      <Component {...pageProps} />
+      <ReactReduxFirebaseProvider {...rrfProps}>
+        <Component {...pageProps} />
       </ReactReduxFirebaseProvider>
     </Provider>
   )

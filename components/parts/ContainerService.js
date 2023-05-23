@@ -1,12 +1,12 @@
 import React from 'react';
 import Service from "./Service";
-import {isEmpty, isLoaded} from "react-redux-firebase";
-import  {useSelector} from 'react-redux';
+import { isEmpty, isLoaded } from "react-redux-firebase";
+import { useSelector } from 'react-redux';
 
-function ContainerService (props){
-    let newData ;
+function ContainerService(props) {
+    let newData;
     const articlesData = useSelector(state => state.base.data.articles);
-    const language= useSelector(state=> state.myLang);
+    const language = useSelector(state => state.myLang);
     if (!isLoaded(articlesData)) {
         // console.log(articlesData);
         return <span className="preloader">Loading</span>;
@@ -23,8 +23,8 @@ function ContainerService (props){
     }
     // console.log(language);
     // console.log(newData);
-    return(
-        <Service lang={language} articles={newData} backpath={props.backpath}  />
+    return (
+        <Service lang={language} articles={newData} backpath={props.backpath} />
     )
 }
 
