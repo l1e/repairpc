@@ -1,10 +1,8 @@
 import { Provider } from 'react-redux'
 import { createStore, applyMiddleware } from 'redux'
 import { composeWithDevTools } from 'redux-devtools-extension'
-
 import { initializeApp } from 'firebase/app';
 import { getDatabase } from "firebase/database";
-
 import { ReactReduxFirebaseProvider } from "react-redux-firebase";
 
 import firebaseConfig from '../config/firebase';

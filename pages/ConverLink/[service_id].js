@@ -1,17 +1,5 @@
-import React, { Fragment, useState, useEffect } from 'react';
-
-import { useParams } from "react-router-dom";
-
-import { useRouter } from 'next/router';
-
-
+import React, { Fragment } from 'react';
 import ServiceSingle from "../../components/parts/ServiceSingle";
-
-import { useSelector } from "react-redux";
-
-
-import { withTranslation } from 'react-i18next';
-
 import Layout from "../../components/layouts/Layout";
 
 export default function Index({ page_id, backpath }) {
