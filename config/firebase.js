@@ -1,12 +1,13 @@
-let firebaseConfig = {
-    apiKey: "AIzaSyAaDOvD5TFzEk6mQBY57bBf0xwZ3si-qto",
-    authDomain: "repairpc-d1ffa.firebaseapp.com",
-    databaseURL: "https://repairpc-d1ffa.firebaseio.com",
-    projectId: "repairpc-d1ffa",
-    storageBucket: "repairpc-d1ffa.appspot.com",
-    messagingSenderId: "2344386412",
-    appId: "1:2344386412:web:a5f901171e87b5d9f43d49",
-    measurementId: "G-W5CVC4DFT1"
+// This is a configuration file that you should obtain from Firebase. You need to upload a file named "database.json" containing the data to your Firebase account.
+const firebaseConfig = {
+    apiKey: "yourapikey",
+    authDomain: "yourauthdomain",
+    databaseURL: "https://somelink.firebaseio.com",
+    projectId: "repairpc-projid",
+    storageBucket: "someadress.appspot.com",
+    messagingSenderId: "33432432",
+    appId: "1:32432432:web:a5f9011dsv87b5d9f43d49",
+    measurementId: "G-WDDVC4DFL1"
 };
 
 
