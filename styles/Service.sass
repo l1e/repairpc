@@ -1,30 +1,24 @@
 .box
-  text-align: center
-  margin: 0px auto 40px
+	text-align: center
+	margin: 0px auto 40px
 
-.box__img
-  width: 100%
-  max-width: 270px
-  height: auto
+	&__img
+		width: 100%
+		max-width: 270px
+		height: auto
 
+	&__title
+		margin-top: 25px
 
-.box__title
-  margin-top: 25px
+	&__description
+		margin-bottom: 30px
 
+	&__button
+		margin: auto
+		display: block
+		background-color: $repair-green
+		border-color: $repair-green
 
-.box__description
-  margin-bottom: 30px
-
-
-.box__button
-  margin: auto
-  display: block
-  background-color: $repair-green
-  border-color: $repair-green
-
-
-.box__button:hover
-  background-color: $repair-green-hover
-  border-color: $repair-green-hover
-
-
+		&:hover
+			background-color: $repair-green-hover
+			border-color: $repair-green-hover

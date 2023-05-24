@@ -10,7 +10,7 @@ function Footer() {
             <Container >
                 <Row>
                     <Col>
-                        <p className="footer_year">
+                        <p className="footer__year">
                             Copyright © 2023
                         </p>
                         <p className="footer__prone">

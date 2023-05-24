@@ -1,9 +1,9 @@
-import React,{Fragment} from 'react';
+import React, { Fragment } from 'react';
 
 import { withTranslation, Trans } from "react-i18next";
-class  TitlePrepare extends React.Component{
-    render(){
-        return(
+class TitlePrepare extends React.Component {
+    render() {
+        return (
             <Fragment>
                 {this.props.isheader === 'true' ? (
                     <div className="header-section-title">
@@ -14,11 +14,11 @@ class  TitlePrepare extends React.Component{
                             <h3 className='header-section-title__title'>
                                 <Trans i18nKey={this.props.titlei18nkey}>{this.props.titlei18text}</Trans>
                             </h3>
-                            ) : (
-                        <h2 className='header-section-title__title'>
-                            <Trans i18nKey={this.props.titlei18nkey}>{this.props.titlei18text}</Trans>
-                        </h2>
-                            )}
+                        ) : (
+                            <h2 className='header-section-title__title'>
+                                <Trans i18nKey={this.props.titlei18nkey}>{this.props.titlei18text}</Trans>
+                            </h2>
+                        )}
                         <span className="header-section-title__line"></span>
                     </div>
                 ) : (

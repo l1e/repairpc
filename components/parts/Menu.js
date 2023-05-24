@@ -139,14 +139,14 @@ function MenuPrepare() {
                             }
 
                             }>
-                                <Link href="/">
-                                    <a
-                                        onClick={() => {
-                                            setExpanded(false);
-                                        }}
-                                    >
-                                        <img className="logo" src="/images/logo_white.png" alt="" />
-                                    </a>
+                                <Link
+                                    href="/"
+                                    onClick={() => {
+                                        setExpanded(false);
+                                    }}>
+
+                                    <img className="logo" src="/images/logo_white.png" alt="" />
+
                                 </Link>
                             </Navbar.Brand>
 
@@ -159,76 +159,81 @@ function MenuPrepare() {
 
                                 <Nav className="ml-auto">
                                     <li className="menu-item">
-                                        <Link href="/">
-                                            <a
-                                                onClick={() => {
-                                                    setExpanded(false);
-                                                }}
-                                                eventkey="1"
-                                                className={"nav-link " + (route_current === '/' ? 'active' : '')}
-                                                activeClassName={"active"}
-                                                exact={true}
-                                            >
-                                                <Trans i18nKey="menu_main">Main</Trans>
-                                            </a>
+                                        <Link
+                                            href="/"
+                                            onClick={() => {
+                                                setExpanded(false);
+                                            }}
+                                            eventkey="1"
+                                            className={"nav-link " + (route_current === '/' ? 'active' : '')}
+                                        // activeClassName={"active"}
+                                        // exact={true}
+                                        >
+
+                                            <Trans i18nKey="menu_main">Main</Trans>
+
                                         </Link>
                                     </li>
                                     <li className="menu-item">
-                                        <Link href="/services">
-                                            <a
-                                                onClick={() => {
-                                                    setExpanded(false);
-                                                }}
-                                                eventkey="2"
-                                                className={"nav-link " + (route_current === '/services' ? 'active' : '')}
-                                                activeClassName="active"
-                                            >
-                                                <Trans i18nKey="menu_serv">Services</Trans>
-                                            </a>
+                                        <Link
+                                            href="/services"
+                                            onClick={() => {
+                                                setExpanded(false);
+                                            }}
+                                            eventkey="2"
+                                            className={"nav-link " + (route_current === '/services' ? 'active' : '')}
+                                        // activeClassName="active"
+                                        >
+
+                                            <Trans i18nKey="menu_serv">Services</Trans>
+
                                         </Link>
                                     </li>
 
                                     <li className="menu-item">
-                                        <Link href="/about">
-                                            <a
-                                                onClick={() => {
-                                                    setExpanded(false);
-                                                }}
-                                                eventkey="3"
-                                                className={"nav-link " + (route_current === '/about' ? 'active' : '')}
-                                                activeClassName="active"
-                                                to="/About" >
-                                                <Trans i18nKey="menu_about">About</Trans>
-                                            </a>
+                                        <Link
+                                            href="/about"
+                                            onClick={() => {
+                                                setExpanded(false);
+                                            }}
+                                            eventkey="3"
+                                            className={"nav-link " + (route_current === '/about' ? 'active' : '')}
+                                            // activeClassName="active"
+                                            to="/About">
+
+                                            <Trans i18nKey="menu_about">About</Trans>
+
                                         </Link>
                                     </li>
                                     <li className="menu-item">
-                                        <Link href="/price">
-                                            <a
-                                                onClick={() => {
-                                                    setExpanded(false);
-                                                }}
-                                                eventkey="3"
-                                                className={"nav-link " + (route_current === '/price' ? 'active' : '')}
-                                                activeClassName="active"
-                                                to="/Price" >
-                                                <Trans i18nKey="menu_price">Price</Trans>
-                                            </a>
+                                        <Link
+                                            href="/price"
+                                            onClick={() => {
+                                                setExpanded(false);
+                                            }}
+                                            eventkey="3"
+                                            className={"nav-link " + (route_current === '/price' ? 'active' : '')}
+                                            // activeClassName="active"
+                                            to="/Price">
+
+                                            <Trans i18nKey="menu_price">Price</Trans>
+
                                         </Link>
                                     </li>
 
                                     <li className="menu-item">
-                                        <Link href="/contact">
-                                            <a
-                                                onClick={() => {
-                                                    setExpanded(false);
-                                                }}
-                                                eventkey="4"
-                                                className={"nav-link " + (route_current === '/contact' ? 'active' : '')}
-                                                activeClassName="active"
-                                                to="/Contact" >
-                                                <Trans i18nKey="menu_cont">Contact </Trans>
-                                            </a>
+                                        <Link
+                                            href="/contact"
+                                            onClick={() => {
+                                                setExpanded(false);
+                                            }}
+                                            eventkey="4"
+                                            className={"nav-link " + (route_current === '/contact' ? 'active' : '')}
+                                            // activeClassName="active"
+                                            to="/Contact">
+
+                                            <Trans i18nKey="menu_cont">Contact </Trans>
+
                                         </Link>
                                     </li>
 
@@ -255,7 +260,7 @@ function MenuPrepare() {
                 </Row>
             </Container>
         </Fragment>
-    )
+    );
 }
 const Menu = withTranslation()(MenuPrepare);
 

@@ -1,45 +1,40 @@
 import { Provider } from 'react-redux'
-
 import { createStore, applyMiddleware } from 'redux'
 import { composeWithDevTools } from 'redux-devtools-extension'
 
-import firebase from 'firebase/compat/app';
+import { initializeApp } from 'firebase/app';
+import { getDatabase } from "firebase/database";
+
 import { ReactReduxFirebaseProvider } from "react-redux-firebase";
 
 import firebaseConfig from '../config/firebase';
-
 import allReducers from '../store/reducer';
 
 import '../styles/index.sass';
-
-
 import '../components/i18n';
-import { useFirebaseConnect } from "react-redux-firebase";
-
-import { useDispatch } from 'react-redux';
-
-import i18n from '../components/i18n';
-
-const todosQuery = {
-  path: "articles",
-  queryParams: ["limitToLast=10"]
-};
-
 
 function MyApp({ Component, pageProps }) {
 
-
-
+  let database
+  let app
 
   let store = createStore(allReducers,
-    composeWithDevTools(applyMiddleware()));
+    composeWithDevTools(applyMiddleware()))
 
   try {
-    firebase.initializeApp(firebaseConfig);
-  } catch (err) { }
+
+    // Initialize Firebase
+    app = initializeApp(firebaseConfig)
+
+    // Initialize Realtime Database 
+    database = getDatabase(app)
+
+  } catch (err) {
+    console.log('MyApp error', err)
+  }
 
   const rrfProps = {
-    firebase,
+    firebase: database,
     config: {
       userProfile: "home"
     },

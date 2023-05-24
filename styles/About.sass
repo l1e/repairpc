@@ -1,22 +1,23 @@
-.about-main.part
-  background-color:  $repair-blue
-.about-main.part p,.about-main.part h2
-  color: #fff
+.about-main
 
-.about-main__face
-  width: 100%
+    &.part
+        background-color: $repair-blue
 
-.about-main__certificate
-  width: 100%
+        p,h2
+            color: #fff
+    &__face
+        width: 100%
 
-.about-main__inner-bio
-  margin: 20px 0px
+    &__certificate
+        width: 100%
 
-.about_biography-inner__bio
+    &__inner-bio
+        margin: 20px 0px
+
+@media (max-width: 991.98px)
+    .about-main_inner-right
+        margin-top: 20px
 
 @media (max-width: 767.98px)
-  .about_biography-inner__bio
-    margin-top: 20px
-
-
-
+    .about_biography-inner__bio
+        margin-top: 20px

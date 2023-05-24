@@ -8,6 +8,8 @@ import Col from 'react-bootstrap/Col';
 import { Trans, withTranslation } from 'react-i18next';
 
 function ServicePrepare(props) {
+
+    console.log('ServicePrepare props:', props)
     const cutStringToValue = (string) => {
         if (string.length > 200) {
             let newString = string.slice(0, 200);
@@ -43,9 +45,9 @@ function ServicePrepare(props) {
                                 )}
                             </p>
                             <Link href={"ConverLink/" + item.id + backpath} id={item.id} >
-                                <a >
-                                    <Button className='box__button' variant="primary"> <Trans i18nKey="services_detailed">Наши услуги</Trans></Button>
-                                </a>
+
+                                <Button className='box__button' variant="primary"> <Trans i18nKey="services_detailed">Наши услуги</Trans></Button>
+
                             </Link>
                         </div>
                     </Col>
@@ -53,7 +55,7 @@ function ServicePrepare(props) {
             })
         };
         </Fragment>
-    )
+    );
 }
 const Service = withTranslation()(ServicePrepare);
 

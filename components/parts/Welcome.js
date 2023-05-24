@@ -1,13 +1,13 @@
-import React,{Fragment} from 'react';
+import React, { Fragment } from 'react';
 
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
 import { withTranslation, Trans } from "react-i18next";
-class  WelcomePrepare extends React.Component{
-    render(){
-        return(
+class WelcomePrepare extends React.Component {
+    render() {
+        return (
             <Fragment>
                 <div className="section-one">
                     <Container >
